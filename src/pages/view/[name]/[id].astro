@@ -1,0 +1,15 @@
+---
+const {name,id} = Astro.props;
+console.log({ name, id });
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: {
+        name:"React",
+        id: '1',
+      },
+    },
+  ];
+}
+---

@@ -7,15 +7,17 @@
   font-family: 'Montserrat';
   font-weight: 600;
   font-size: 1rem;
+  line-height: 1.5;
   /* color: var(--primary-3); */
 }
 
 
 
 .btn {
-  padding: 0.2rem;
+  padding: 0.3rem 0.5rem;
   outline: none;
   border: none;
+  text-decoration: none;
   background: var(--primary-3);
   color: var(--primary-4);
   border-radius: 0.3rem;
@@ -24,11 +26,16 @@
 main {
   width: 100vw;
   height: 100vh;
-  padding-left: 23rem;
+  padding-left: 20rem;
   padding-right: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 7rem;
   padding-top: 5rem;
   overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 ::-webkit-scrollbar{
@@ -39,6 +46,7 @@ main {
   --primary-1: #03001C;
   --primary-2: #301E67;
   --primary-3: #5B8FB9;
+  /* --primary-3: #9c83ea; */
   --primary-4: #B6EADA;
   --sidenav: #03001Cce;
   --gradient:#182840;

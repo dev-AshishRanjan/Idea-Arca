@@ -1,0 +1,47 @@
+---
+const name = Astro.params.name;
+import MainLayout from "../../../layout/MainLayout.astro";
+import Sections from "../../../database/sections.json";
+import Cards from "../../../components/Cards.astro";
+
+export async function getStaticPaths() {
+  return [
+    Sections.map((ele) => {
+      return {
+        params: {
+          name: ele,
+        },
+      };
+    }),
+  ];
+}
+import MainData from "../../../database/MainData.json";
+var Data = [];
+try {
+  var Data_temp = MainData.find((ele) => ele.section == name);
+  Data_temp ? (Data = Data_temp.data) : null;
+} catch (e) {
+  throw new Error(e);
+}
+// import Data from `../../database/${name}.json`;
+---
+
+<MainLayout title={`PIB - ${name}`}>
+  <main>
+    {
+      Data &&
+        Data.length > 0 &&
+        Data.map((ele) => {
+          return (
+            <Cards
+              id={ele.id}
+              title={ele.title}
+              tags={ele.tags}
+              description={ele.description}
+              link={ele.link}
+            />
+          );
+        })
+    }
+  </main>
+</MainLayout>
