@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Poppins:wght@300&family=Roboto&family=Roboto+Mono&family=Splash&family=Ubuntu:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 1rem;
+  /* color: var(--primary-3); */
+}
+
+
+
+.btn {
+  padding: 0.2rem;
+  outline: none;
+  border: none;
+  background: var(--primary-3);
+  color: var(--primary-4);
+  border-radius: 0.3rem;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  padding-left: 23rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  overflow: auto;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+:root {
+  --primary-1: #03001C;
+  --primary-2: #301E67;
+  --primary-3: #5B8FB9;
+  --primary-4: #B6EADA;
+  --sidenav: #03001Cce;
+  --gradient:#182840;
+}

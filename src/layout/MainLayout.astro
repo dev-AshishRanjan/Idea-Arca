@@ -1,0 +1,53 @@
+---
+const { title } = Astro.props;
+import "../styles/global.css";
+import "../styles/mixins.scss";
+import Header from "../components/Header.astro";
+import SideNav from "../components/SideNav.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="body">
+      <Header />
+      <div class="main">
+        <SideNav />
+        <slot>
+          <main>
+            This is the default slot, which will be used if no other slots are
+            defined in your component's template! Hello, world!
+          </main>
+        </slot>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style lang="scss">
+  body {
+    height: 100vh;
+    width: 100vw;
+    // background: var(--primary-1);
+    color: var(--primary-3);
+    overflow: hidden;
+    background-image: linear-gradient(var(--primary-3) 1.5px, transparent 1.5px),
+      linear-gradient(to right, var(--primary-3) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+    background-color: var(--primary-1);
+    .body {
+      height: 100vh;
+      width: 100vw;
+      // background: var(--primary-1);
+      color: var(--primary-3);
+      overflow: hidden;
+      background:radial-gradient(circle at top,var(--gradient),var(--sidenav));
+    }
+  }
+</style>

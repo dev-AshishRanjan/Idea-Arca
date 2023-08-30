@@ -1,0 +1,54 @@
+---
+---
+
+<div class="nav">
+  <!-- <a href="/">Home</a> -->
+  <div class="social-links">
+    <a href="https://github.com/">
+      <iconify-icon icon="devicon:github"></iconify-icon>
+    </a>
+  </div>
+  <div class="nav-links">
+    <a href="/contributors">Contributors</a>
+    <a href="/contact">Contact</a>
+    <select name="themes" id="themes" class="btn">
+      <option value="dark" selected>Dark</option>
+      <option value="light" >Light</option>
+    </select>
+  </div>
+</div>
+
+<style lang="scss">
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 3;
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      a {
+        text-decoration: none;
+        color: var(--primary-3);
+        padding: 0.3rem;
+      }
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      a {
+        text-decoration: none;
+        color: var(--primary-3);
+      }
+    }
+  }
+</style>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+></script>

@@ -1,0 +1,41 @@
+---
+import Sections from "../database/sections.json";
+// const val=document.
+---
+
+<div class="side-nav">
+  {
+    Sections.map((ele) => {
+      return <a href={`/view/${ele}`}>{ele}</a>;
+    })
+  }
+</div>
+
+<style lang="scss">
+  .side-nav {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0rem 0.5rem;
+    backdrop-filter: blur(0.15rem);
+    // background: var(--sidenav);
+    padding-top: 5rem;
+    padding-left: 1rem;
+    z-index: 1;
+    overflow: auto;
+    // gap: 1rem;
+    a {
+      text-decoration: none;
+      color: var(--primary-3);
+      font-size: 1.1rem !important;
+      text-transform: uppercase;
+      padding: 0.7rem 0;
+    }
+  }
+</style>
