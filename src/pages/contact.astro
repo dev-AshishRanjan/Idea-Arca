@@ -2,7 +2,44 @@
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
-
 <MainLayout title="Main">
-
+  <main>
+    <form
+      action="https://formsubmit.co/kumarashishranjan4971@gmail.com"
+      method="POST"
+    >
+      <input type="text" placeholder="Name" name="name" />
+      <input type="email" placeholder="Email" name="email" />
+      <input type="text" placeholder="Subject" name="subject" />
+      <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Message"
+      ></textarea>
+      <button type="submit" class="btn"> submit</button>
+    </form>
+  </main>
 </MainLayout>
+
+<style lang="scss">
+  form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    input,textarea{
+      width: 100%;
+      resize: none;
+      background: transparent;
+      backdrop-filter: blur(0.2rem);
+      border: 1px dashed var(--primary-3);
+      outline: none;
+      font-weight: 100;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      color: var(--primary-3);
+      &::placeholder{
+        color: var(--primary-3);
+        opacity: 0.6;
+      }
+    }
+  }
+</style>
