@@ -22,6 +22,10 @@
   background: var(--primary-3);
   color: var(--primary-4);
   border-radius: 0.3rem;
+  transition: all 0.2s ease-in-out;
+  &:hover{
+    opacity: 0.8;
+  }
 }
 
 main {
@@ -91,4 +95,12 @@ main {
   --primary-4: #C58940;
   --sidenav: #FAF8F1ce;
   --gradient: #f7b2ff;
+}
+.neon {
+  --primary-1: #793FDF;
+  --primary-2: #7091F5;
+  --primary-3: #97FFF4;
+  --primary-4: #4A125D;
+  --sidenav: #793FDFce;
+  --gradient: #e600ff;
 }
