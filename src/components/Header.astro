@@ -47,6 +47,8 @@
         color: var(--primary-3);
       }
       select {
+        width: 8ch;
+        text-overflow: ellipsis;
         option {
           font-weight: 100;
         }
@@ -57,3 +59,44 @@
 
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
 ></script>
+
+<script>
+  const html = document.documentElement;
+  const PIBtheme = localStorage.getItem("PIBtheme");
+  if (PIBtheme === null) {
+    localStorage.setItem("PIBtheme", "dark");
+  }
+  console.log({ PIBtheme });
+  document.querySelector("#themes").value = PIBtheme;
+  html.classList.add(PIBtheme);
+
+  const select = document.querySelector("#themes");
+  select.addEventListener("change", handleChange);
+
+  const allClasses = (classes) => {
+    const newClasses = [];
+    for (const class_name of classes) {
+      if (!class_name.includes("astro")) {
+        newClasses.push(class_name);
+      }
+    }
+    return newClasses;
+  };
+
+  function handleChange() {
+    const selectVal = document.querySelector("#themes").value;
+    console.log(selectVal);
+    // const html = document.querySelector("html");
+    const list: any = html.classList;
+    var classes: any = html.classList;
+    classes = allClasses(classes);
+    classes.map((ele) => {
+      html.classList.remove(ele);
+    });
+    html.classList.add(selectVal);
+    console.log({ classes });
+    localStorage.setItem("PIBtheme", selectVal);
+  }
+
+  // handleChange();
+</script>

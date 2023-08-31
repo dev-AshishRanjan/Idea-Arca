@@ -73,3 +73,22 @@ main {
   --sidenav: #03001Cce;
   --gradient: #182840;
 }
+
+.dark {
+  --primary-1: #03001C;
+  --primary-2: #301E67;
+  --primary-3: #5B8FB9;
+  --primary-4: #B6EADA;
+  --sidenav: #03001Cce;
+  --gradient: #182840;
+}
+
+/* Light theme */
+.light {
+  --primary-1: #FAF8F1;
+  --primary-2: #FAEAB1;
+  --primary-3: #E5BA73;
+  --primary-4: #C58940;
+  --sidenav: #FAF8F1ce;
+  --gradient: #f7b2ff;
+}
