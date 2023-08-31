@@ -15,16 +15,23 @@ import SideNav from "../components/SideNav.astro";
     <title>{title}</title>
   </head>
   <body>
+    <!--grid style -->
     <div class="body">
-      <Header />
-      <div class="main">
-        <SideNav />
-        <slot>
-          <main>
-            This is the default slot, which will be used if no other slots are
-            defined in your component's template! Hello, world!
-          </main>
-        </slot>
+      <!--top gradient style -->
+      <div class="grains"></div>
+      <!--grain style -->
+      <div class="top-body">
+        <!--Main Content -->
+        <Header />
+        <div class="main">
+          <SideNav />
+          <slot>
+            <main>
+              This is the default slot, which will be used if no other slots are
+              defined in your component's template! Hello, world!
+            </main>
+          </slot>
+        </div>
       </div>
     </div>
   </body>
@@ -39,9 +46,11 @@ import SideNav from "../components/SideNav.astro";
     overflow: hidden;
     background-image: linear-gradient(var(--primary-3) 1.5px, transparent 1.5px),
       linear-gradient(to right, var(--primary-3) 1.5px, transparent 1.5px);
-    background-size: 20px 20px;
+    background-size: 40px 40px;
     background-color: var(--primary-1);
+
     .body {
+      // position: relative;
       height: 100vh;
       width: 100vw;
       // background: var(--primary-1);
@@ -52,6 +61,28 @@ import SideNav from "../components/SideNav.astro";
         var(--gradient),
         var(--sidenav)
       );
+      .top-body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 2;
+      }
+      .grains {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-image: radial-gradient(var(--primary-2) 1px, transparent 1px),
+          radial-gradient(var(--primary-2) 1px, transparent 1px);
+        background-size: 32px 32px;
+        background-position: 0 0, 16px 16px;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1;
+        opacity: 0.7;
+      }
     }
   }
 </style>

@@ -8,6 +8,7 @@
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5;
+  text-overflow: ellipsis;
   /* color: var(--primary-3); */
 }
 
@@ -38,7 +39,28 @@ main {
   gap: 1rem;
 }
 
-::-webkit-scrollbar{
+.details {
+  width: 100vw;
+  height: 100vh;
+  padding-left: 20rem;
+  padding-right: 3rem;
+  padding-bottom: 7rem;
+  padding-top: 5rem;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#websiteUrl {
+  position: absolute;
+  margin-left: 20rem;
+  top: 1rem;
+  font-size: 1.7rem;
+  width: 30rem;
+  text-overflow: ellipsis;
+}
+
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -49,5 +71,5 @@ main {
   /* --primary-3: #9c83ea; */
   --primary-4: #B6EADA;
   --sidenav: #03001Cce;
-  --gradient:#182840;
+  --gradient: #182840;
 }

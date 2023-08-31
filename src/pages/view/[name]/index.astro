@@ -27,6 +27,7 @@ try {
 ---
 
 <MainLayout title={`PIB - ${name}`}>
+  <span id="websiteUrl"></span>
   <main>
     {
       Data &&
@@ -39,9 +40,14 @@ try {
               tags={ele.tags}
               description={ele.description}
               link={ele.link}
+              section={name}
             />
           );
         })
     }
   </main>
 </MainLayout>
+
+<script>
+  document.getElementById("websiteUrl").textContent = window.location.pathname.split("/")[2].replaceAll("%20"," ");
+</script>

@@ -1,15 +1,141 @@
 ---
-const {name,id} = Astro.props;
-console.log({ name, id });
+const { name, id } = Astro.params;
+import MainLayout from "../../../layout/MainLayout.astro";
+import MainData from "../../../database/MainData.json";
 
+// getstaticpaths
 export async function getStaticPaths() {
+  const allParams = [];
+
+  MainData.map((Ele) => {
+    Ele.data.map((ele) => {
+      allParams.push({
+        name: Ele.section,
+        id: ele.id,
+      });
+    });
+  });
+
   return [
-    {
-      params: {
-        name:"React",
-        id: '1',
-      },
-    },
+    allParams.map((Ele) => {
+      return {
+        params: {
+          name: Ele.name,
+          id: Ele.id,
+        },
+      };
+    }),
   ];
 }
+
+// data fetching
+var Data: Props = {};
+var Data_temp = MainData.find((ele) => ele.section == name);
+var Data_final = Data_temp ? Data_temp.data.find((ele) => ele.id == id) : null;
+Data_final ? (Data = Data_final) : null;
+try {
+} catch (e) {
+  throw new Error(e);
+}
+
+interface Props {
+  title?: string;
+  tags?: Array<string>;
+  description?: string;
+  link?: string;
+}
 ---
+
+<MainLayout title={`PIB - ${name}`}>
+  <span id="websiteUrl"></span>
+  <section class="details">
+    <div class="data">
+      <h1>{id}</h1>
+      <h2>
+        {Data.title}
+      </h2>
+      <div class="tags">
+        {
+          Data.tags &&
+            Data.tags.length > 0 &&
+            Data.tags.map((ele) => {
+              return <span>{ele}</span>;
+            })
+        }
+      </div>
+      <p class="description">{Data.description}</p>
+      <a class="btn" href={Data.link} target="_blank">Link</a>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  document.getElementById("websiteUrl").textContent = window.location.pathname
+    .split("/")[2]
+    .replaceAll("%20", " ");
+</script>
+
+<style lang="scss">
+  .data {
+    width: 70%;
+    background: transparent;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    h1 {
+      font-size: 4rem;
+      position: absolute;
+      top: 60%;
+      right: 7rem;
+      overflow: hidden;
+      display: inline-block;
+      width: 2ch;
+      font-weight: 100;
+      text-align: right;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      text-transform: capitalize;
+      width: 100%;
+    }
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      span {
+        padding: 0.4rem 0.5rem;
+        border: 0.1px solid var(--primary-4);
+        border-radius: 0.3rem;
+        color: var(--primary-4);
+        font-weight: 100;
+      }
+    }
+    p,
+    .description {
+      text-decoration: none;
+      width: 100%;
+      color: var(--primary-4);
+      line-height: 2;
+      font-weight: 100;
+    }
+    .btn {
+      width: 7rem;
+      padding: 0.5rem 0.7rem;
+      text-align: center;
+    }
+  }
+  @media (min-width: 1500px) {
+    .data {
+      width: 90%;
+    }
+  }
+  @media (max-width: 1300px) {
+    .data {
+      width: 98%;
+    }
+  }
+</style>
