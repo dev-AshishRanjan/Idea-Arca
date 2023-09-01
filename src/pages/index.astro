@@ -13,25 +13,33 @@ const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
         project ideas in various tech fields through this inspirational
         repository.
       </p>
+      <p>
+        <img
+          src=""
+          class="typing"
+          <img
+          src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=1.5"
+        />
+      </p>
     </div>
     <div class="github-details">
       <a href={`${repoURL}/forks`} target="_blank" class="forks">
-        <p class="client"></p>
+        <p class="client">0</p>
         <p>Forks</p>
       </a>
       <a href={`${repoURL}/stargazers`} target="_blank" class="stars">
-        <p class="client"></p>
+        <p class="client">0</p>
         <p>Stars</p>
       </a>
       <a href={`${repoURL}/issues`} target="_blank" class="issues">
-        <p class="client"></p>
+        <p class="client">0</p>
         <p>Open Issues</p>
       </a>
       <div class="language">
-        <p class="client"></p>
+        <p class="client">JS</p>
       </div>
       <div class="license">
-        <p class="client"></p>
+        <p class="client">MIT</p>
       </div>
     </div>
   </section>
@@ -60,7 +68,7 @@ const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
         mix-blend-mode: overlay;
         background-clip: text;
         -webkit-background-clip: text;
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 900;
         transition: all 0.1s ease-in-out;
         &:hover {
@@ -79,6 +87,7 @@ const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
       p {
         word-wrap: break-word;
         width: 70%;
+        // font-weight: 100;
         // word-break: break-all;
       }
     }
@@ -89,7 +98,7 @@ const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
       flex-wrap: wrap;
       width: 17rem;
       gap: 1.5rem;
-			max-height: 20rem;
+      max-height: 20rem;
       // background: red;
       a {
         text-decoration: none;
@@ -105,7 +114,7 @@ const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
       }
       div {
         width: 100%;
-				text-align: center;
+        text-align: center;
       }
     }
   }
@@ -113,15 +122,20 @@ const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
   @media (max-width: 1000px) {
     .details {
       flex-direction: column;
-			.github-details{
-				width: 100%;
-				.client{
-					font-size: 1.5rem;
-				}
-				div{
-					width: unset;
-				}
-			}
+      .hero {
+        .title {
+          font-size: 2rem;
+        }
+      }
+      .github-details {
+        width: 100%;
+        .client {
+          font-size: 1.5rem;
+        }
+        div {
+          width: unset;
+        }
+      }
     }
   }
 </style>
@@ -150,4 +164,20 @@ const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
     const Ele = document.querySelector(`.${ele_in}>.client`);
     Ele.innerHTML = eval(ele_in);
   });
+
+  // Typing color
+
+  function handleThemeChange() {
+    const textColor = window
+      .getComputedStyle(document.querySelector(":root"))
+      .getPropertyValue("--primary-3");
+    const textVal = textColor.split("#")[1];
+
+    const typing = document.querySelector(".typing");
+    const url = `https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines=Welcome+to+Idea Arca+!;Let's+Build+Together;Get Youre New project Idea;Check+our+GitHub+Repo;Thanks+for+Contributing`;
+    typing.setAttribute("src", url);
+  }
+
+  document.querySelector(":root").addEventListener("change", handleThemeChange);
+  handleThemeChange();
 </script>
