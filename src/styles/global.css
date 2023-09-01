@@ -22,7 +22,7 @@
   background: var(--primary-3);
   color: var(--primary-4);
   border-radius: 0.3rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   &:hover{
     opacity: 0.8;
   }

@@ -1,10 +1,153 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
+const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
 ---
 
-
-<MainLayout title="Main">
-	<main>
-		<p>Astro Initial</p>
-	</main>
+<MainLayout title="Idea Arca">
+  <section class="details">
+    <div class="hero">
+      <a href="/" class="title">Idea Arca</a>
+      <p>
+        Idea Arca (Latin: "Idea Vault") is a Project Idea Bank. Unleash your
+        tech creativity. Discover, collaborate, and bring to life innovative
+        project ideas in various tech fields through this inspirational
+        repository.
+      </p>
+    </div>
+    <div class="github-details">
+      <a href={`${repoURL}/forks`} target="_blank" class="forks">
+        <p class="client"></p>
+        <p>Forks</p>
+      </a>
+      <a href={`${repoURL}/stargazers`} target="_blank" class="stars">
+        <p class="client"></p>
+        <p>Stars</p>
+      </a>
+      <a href={`${repoURL}/issues`} target="_blank" class="issues">
+        <p class="client"></p>
+        <p>Open Issues</p>
+      </a>
+      <div class="language">
+        <p class="client"></p>
+      </div>
+      <div class="license">
+        <p class="client"></p>
+      </div>
+    </div>
+  </section>
 </MainLayout>
+
+<style lang="scss">
+  .details {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .hero {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+      .title {
+        letter-spacing: -3px;
+        text-decoration: none;
+        background: radial-gradient(
+          circle at top,
+          var(--primary-4),
+          var(--primary-3)
+        );
+        color: transparent;
+        mix-blend-mode: overlay;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 3rem;
+        font-weight: 900;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+          background: radial-gradient(
+            circle at right,
+            var(--primary-4),
+            var(--primary-3)
+          );
+          mix-blend-mode: overlay;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: var(--primary-3);
+        }
+      }
+      p {
+        word-wrap: break-word;
+        width: 70%;
+        // word-break: break-all;
+      }
+    }
+    .github-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 17rem;
+      gap: 1.5rem;
+			max-height: 20rem;
+      // background: red;
+      a {
+        text-decoration: none;
+        color: var(--primary-3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .client {
+        font-size: 2rem;
+        // color: var(--primary-4);
+      }
+      div {
+        width: 100%;
+				text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .details {
+      flex-direction: column;
+			.github-details{
+				width: 100%;
+				.client{
+					font-size: 1.5rem;
+				}
+				div{
+					width: unset;
+				}
+			}
+    }
+  }
+</style>
+
+<script>
+  const repoName = "dev-AshishRanjan/AetherNex";
+  const getRepoInfo = async (repoName) => {
+    const response = await fetch(`https://api.github.com/repos/${repoName}`);
+    const data = await response.json();
+
+    return {
+      forks: data.forks,
+      stars: data.stargazers_count,
+      issues: data.open_issues,
+      language: data.language,
+      license: data.license.name,
+    };
+  };
+
+  const githubarray = ["forks", "stars", "issues", "language", "license"];
+  const { forks, stars, issues, language, license } = await getRepoInfo(
+    repoName
+  );
+  console.log({ forks, stars });
+  githubarray.forEach((ele_in) => {
+    const Ele = document.querySelector(`.${ele_in}>.client`);
+    Ele.innerHTML = eval(ele_in);
+  });
+</script>

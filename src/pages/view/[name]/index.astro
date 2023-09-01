@@ -26,7 +26,7 @@ try {
 // import Data from `../../database/${name}.json`;
 ---
 
-<MainLayout title={`PIB - ${name}`}>
+<MainLayout title={`Idea Arca - ${name}`}>
   <span id="websiteUrl"></span>
   <main>
     {
@@ -49,5 +49,7 @@ try {
 </MainLayout>
 
 <script>
-  document.getElementById("websiteUrl").textContent = window.location.pathname.split("/")[2].replaceAll("%20"," ");
+  document.getElementById("websiteUrl").textContent = window.location.pathname
+    .split("/")[2]
+    .replaceAll("%20", " ");
 </script>
