@@ -35,6 +35,11 @@ const { id, title, description, link, tags, section } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    transition:all 0.15s ease-in-out;
+    &:hover{
+      border: 1px solid var(--primary-3);
+      box-shadow: 0 1px 1px 1px var(--primary-2);
+    }
 
     h1 {
       font-size: 2rem;
