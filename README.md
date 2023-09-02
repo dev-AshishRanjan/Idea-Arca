@@ -23,13 +23,13 @@
 </div>
 
 <p align="center">
-  <img align="center" src="https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines= 👋🏻 Welcome to Idea Arca 👋🏻;👨🏻‍💻 Let's Build Together 👩🏻‍💻;💡 Get Your New project Idea 💡;🌐 Check our Website 🌐;🙏🏻 Thanks for Contributing 🙏🏻"
+  <img align="center" src="https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines=+👋🏻+Welcome+to+Idea+Arca+👋🏻;👨🏻‍💻+Lets+Build+Together+👩🏻‍💻;💡+Get+Your+New+project+Idea+💡;🌐+Check+our+Website+🌐;🙏🏻+Thanks+for+Contributing+🙏🏻"
  <img src= 'https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2.5' align="center/>
 </p>
 
 ---
 
-# **_Idea Arca_**
+# **Idea Arca**
 
 Idea Arca (Latin: "Idea Vault") is a Project Idea Bank. Unleash your
 tech creativity. Discover, collaborate, and bring to life innovative
@@ -257,8 +257,7 @@ we are showing an example by adding an idea in a new sectio : `BackboneJs` secti
 
 1. `section` : the major Fields
 2. **`link` : It should be a working, non-broken link. It can be a figma, hosted website link. If your idea is based on any other already existing website (can be desings or any feature), then provide that website link.**
-3. *All the `id` in each sections must be **unique***
-
+3. \*All the `id` in each sections must be **unique\***
 
 <!-- ---
 
