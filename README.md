@@ -30,6 +30,7 @@
 ---
 
 # **_Idea Arca_**
+
 Idea Arca (Latin: "Idea Vault") is a Project Idea Bank. Unleash your
 tech creativity. Discover, collaborate, and bring to life innovative
 project ideas in various tech fields through this inspirational
@@ -38,16 +39,13 @@ repository.
 ## Tech Stack
 
 1. **_Astro_** : A fast front-end js framework
-
-- Video : https://www.youtube.com/watch?v=zrPVTf761OI&pp=ygUOYXN0cm8gdHV0b3JpYWw%3D
+  - Video : https://www.youtube.com/watch?v=zrPVTf761OI&pp=ygUOYXN0cm8gdHV0b3JpYWw%3D
 
 2. **_scss_** :
-
-- Video : https://www.youtube.com/watch?v=_a5j7KoflTs&pp=ygUNc2FzcyB0dXRvcmlhbA%3D%3D
+  - Video : https://www.youtube.com/watch?v=_a5j7KoflTs&pp=ygUNc2FzcyB0dXRvcmlhbA%3D%3D
 
 3. **JSON** :
-
-- Video : https://www.youtube.com/watch?v=iiADhChRriM&pp=ygUManNvbnR1dG9yaWFs
+  - Video : https://www.youtube.com/watch?v=iiADhChRriM&pp=ygUManNvbnR1dG9yaWFs
 
 After going through these videos you're qualified enough to work on our codebase
 
@@ -60,6 +58,20 @@ Here are some ways you can contribute to this project:
 - Report/Fix bugs.
 - Write documentation.
 - Others : Implement New Features , Modify UI/UX
+
+### Process of Contribution
+
+1. _Fork_ : Fork this GitHub Repo to your own github account
+2. _Clone_ : Clone the forked repo (the repo present on your account) to your local machine.
+3. _Changes_ : Create a new branch and commit your changes on that branch.
+4. _Push_ : After all changes are commited, push your changes to your remote repo.
+5. _PR_ : After pushing changes, raise a PR from your remote repo to this repo's dev branch.
+
+
+> If you are new to git and github, I will suggest you first go through this :
+> 1. YT video (Recommended) : https://www.youtube.com/watch?v=RGOj5yH7evk&pp=ygUOZ2l0IGFuZCBnaXRodWI%3D
+> 2. Docs : https://hacktoberfest.com/participation/#beginner-resources
+
 
 ---
 
@@ -75,59 +87,59 @@ we are showing an eg by adding a theme called `test`.
 
 1. Add a new `<option>` in `./src/components/Header.astro` :
 
-- Before
+  - Before
 
-```js
-<select name="themes" id="themes" class="btn">
-  /* other options */
-  <option value="neon">Neon</option>
-</select>
-```
+  ```js
+  <select name="themes" id="themes" class="btn">
+    /* other options */
+    <option value="neon">Neon</option>
+  </select>
+  ```
 
-- After
+  - After
 
-```js
-<select name="themes" id="themes" class="btn">
-  /* other options */
-  <option value="neon">Neon</option>
-  /* Added code 👇 */
-  <option value="test">Test</option>
-</select>
-```
+  ```js
+  <select name="themes" id="themes" class="btn">
+    /* other options */
+    <option value="neon">Neon</option>
+    /* Added code 👇 */
+    <option value="test">Test</option>
+  </select>
+  ```
 
 2. Adding a new `class` code in `./src/styles/global.scss` :
 
-- Before
+  - Before
 
-```scss
-/* Other Codes*/
-.neon {
-  --primary-1: #793fdf;
-  --primary-2: #7091f5;
-  --primary-3: #97fff4;
-  --primary-4: #ffffff;
-  --sidenav: #793fdfce;
-  --gradient: #e600ff;
-}
-```
+  ```scss
+  /* Other Codes*/
+  .neon {
+    --primary-1: #793fdf;
+    --primary-2: #7091f5;
+    --primary-3: #97fff4;
+    --primary-4: #ffffff;
+    --sidenav: #793fdfce;
+    --gradient: #e600ff;
+  }
+  ```
 
-- After
+  - After
 
-```scss
-/* Other Codes*/
-.neon {
-  /*same*/
-}
-/* Added code 👇 */
-.test {
-  --primary-1: #000000;
-  --primary-2: #000132;
-  --primary-3: #000245;
-  --primary-4: #ffffff;
-  --sidenav: #0000ce;
-  --gradient: #f690fa;
-}
-```
+  ```scss
+  /* Other Codes*/
+  .neon {
+    /*same*/
+  }
+  /* Added code 👇 */
+  .test {
+    --primary-1: #000000;
+    --primary-2: #000132;
+    --primary-3: #000245;
+    --primary-4: #ffffff;
+    --sidenav: #0000ce;
+    --gradient: #f690fa;
+  }
+  ```
 
 ### NOTE :
 
@@ -150,47 +162,47 @@ we are showing an example by adding an idea in `React` section.
 
 1. Add Your Object in the `./src/database/MainData.json` inside the `data` of React section :
 
-- Before
+  - Before
 
-```js
-[
-  {
-    section: "React",
-    data: [
-      {
-        id: 1,
-        title: "E-commerce Dashboard",
-        tags: ["React", "Redux", "CSS", "API Integration"],
-        description: "Lorem Ispum",
-        link: "https://example-ecommerce-dashboard.com",
-      },
-    ],
-  },
-];
-```
+  ```js
+  [
+    {
+      section: "React",
+      data: [
+        {
+          id: 1,
+          title: "E-commerce Dashboard",
+          tags: ["React", "Redux", "CSS", "API Integration"],
+          description: "Lorem Ispum",
+          link: "https://example-ecommerce-dashboard.com",
+        },
+      ],
+    },
+  ];
+  ```
 
-- After
+  - After
 
-```js
-[
-  {
-    section: "React",
-    data: [
-      {
-        // prev code
-      },
-      /* Added code 👇 */
-      {
-        id: 2,
-        title: "Test",
-        tags: ["React", "Redux", "scss", "API"],
-        description: "Give Meaningful Description, there is no word limit",
-        link: "Working Link",
-      },
-    ],
-  },
-];
-```
+  ```js
+  [
+    {
+      section: "React",
+      data: [
+        {
+          // prev code
+        },
+        /* Added code 👇 */
+        {
+          id: 2,
+          title: "Test",
+          tags: ["React", "Redux", "scss", "API"],
+          description: "Give Meaningful Description, there is no word limit",
+          link: "Working Link",
+        },
+      ],
+    },
+  ];
+  ```
 
 ### **CASE 2** : Adding Idea in a New Section/Field
 
@@ -198,59 +210,59 @@ we are showing an example by adding an idea in a new sectio : `BackboneJs` secti
 
 1. Add Your Section Name in `./src/database/sections.json`, to make your section/field appear in left navigation panel :
 
-- Before
+  - Before
 
-```js
-["React", "Vue", "Svelte", "Frontend", "Backend"];
-```
+  ```js
+  ["React", "Vue", "Svelte", "Frontend", "Backend"];
+  ```
 
-- After
+  - After
 
-```js
-["React", "Vue", "Svelte", "Frontend", "Backend", "BackboneJs"];
-```
+  ```js
+  ["React", "Vue", "Svelte", "Frontend", "Backend", "BackboneJs"];
+  ```
 
 2. Add Your Object in the `./src/database/MainData.json` inside the `data` of React section :
 
-- Before
+  - Before
 
-```js
-[
-  {
-    section: "React",
-    data: [
-      {
-        id: 1,
-        title: "E-commerce Dashboard",
-        tags: ["React", "Redux", "CSS", "API Integration"],
-        description: "Lorem Ispum",
-        link: "Working Link",
-      },
-    ],
-  },
-  // Similar Codes for Other Sections
-];
-```
+  ```js
+  [
+    {
+      section: "React",
+      data: [
+        {
+          id: 1,
+          title: "E-commerce Dashboard",
+          tags: ["React", "Redux", "CSS", "API Integration"],
+          description: "Lorem Ispum",
+          link: "Working Link",
+        },
+      ],
+    },
+    // Similar Codes for Other Sections
+  ];
+  ```
 
-- After
+  - After
 
-```js
-[
-  // prev Codes
-  {
-    section: "BackboneJs",
-    data: [
-      {
-        id: 1,
-        title: "E-commerce Dashboard",
-        tags: ["Backbonejs"],
-        description: "Give Meaningful Description, there is no word limit",
-        link: "Working Link",
-      },
-    ],
-  },
-];
-```
+  ```js
+  [
+    // prev Codes
+    {
+      section: "BackboneJs",
+      data: [
+        {
+          id: 1,
+          title: "E-commerce Dashboard",
+          tags: ["Backbonejs"],
+          description: "Give Meaningful Description, there is no word limit",
+          link: "Working Link",
+        },
+      ],
+    },
+  ];
+  ```
 
 ### NOTE :
 
