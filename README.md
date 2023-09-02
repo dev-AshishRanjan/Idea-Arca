@@ -24,13 +24,12 @@
 
 <p align="center">
   <img align="center" src="https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines=+👋🏻+Welcome+to+Idea+Arca+👋🏻;👨🏻‍💻+Lets+Build+Together+👩🏻‍💻;💡+Get+Your+New+project+Idea+💡;🌐+Check+our+Website+🌐;🙏🏻+Thanks+for+Contributing+🙏🏻"
- <img src= 'https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2.5' align="center/>
+ <img src= 'https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2.5'/>
 </p>
 
 ---
 
-# **Idea Arca**
-
+# **_Idea Arca_**
 Idea Arca (Latin: "Idea Vault") is a Project Idea Bank. Unleash your
 tech creativity. Discover, collaborate, and bring to life innovative
 project ideas in various tech fields through this inspirational
