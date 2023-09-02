@@ -4,6 +4,7 @@ import "../styles/global.scss";
 import "../styles/mixins.scss";
 import Header from "../components/Header.astro";
 import SideNav from "../components/SideNav.astro";
+import HamburgerMenu from "../components/HamburgerMenu.astro";
 ---
 
 <html lang="en">
@@ -32,6 +33,11 @@ import SideNav from "../components/SideNav.astro";
         <Header />
         <div class="main">
           <SideNav />
+          <HamburgerMenu />
+          <div class="hamBar">
+            <i class="fa-solid fa-bars ham"></i>
+            <i class="fa-solid fa-xmark cross"></i>
+          </div>
           <slot>
             <main>
               This is the default slot, which will be used if no other slots are
@@ -75,6 +81,18 @@ import SideNav from "../components/SideNav.astro";
         height: 100vh;
         width: 100vw;
         z-index: 2;
+        .main {
+          .hamBar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            display: none;
+            .cross {
+              display: none;
+            }
+          }
+        }
       }
       .grains {
         position: absolute;
@@ -92,4 +110,45 @@ import SideNav from "../components/SideNav.astro";
       }
     }
   }
+
+  @media (max-width: 800px) {
+    body {
+      .body {
+        .top-body {
+          .main {
+            .hamBar {
+              display: block;
+              z-index: 100;
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
+
+<script>
+  const HamburgerMenu = document.querySelector(".HamburgerMenu");
+  const Ham = document.querySelector(".ham");
+  const Cross = document.querySelector(".cross");
+  const HamBar = document.querySelector(".hamBar");
+
+  var count = 0;
+  function handleHamClick() {
+    if (count % 2 == 0) {
+      HamburgerMenu.classList.remove("hide");
+      HamburgerMenu.classList.add("show");
+      Ham.style.display = "none";
+      Cross.style.display = "block";
+    } else {
+      HamburgerMenu.classList.remove("show");
+      HamburgerMenu.classList.add("hide");
+      Cross.style.display = "none";
+      Ham.style.display = "block";
+    }
+    console.log(count);
+    count++;
+  }
+
+  HamBar.addEventListener("click", handleHamClick);
+</script>

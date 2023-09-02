@@ -129,6 +129,10 @@ main {
   }
 }
 
+i {
+  font-size: 1.5rem;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -147,7 +151,7 @@ main {
   --primary-1: #03001C;
   --primary-2: #301E67;
   --primary-3: #5B8FB9;
-  // --primary-3: #9c83ea;
+  --primary-3: #9c83ea;
   --primary-4: #B6EADA;
   --sidenav: #03001Cce;
   --gradient: #182840;

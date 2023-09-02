@@ -1,0 +1,158 @@
+---
+import Sections from "../database/sections.json";
+// const val=document.
+---
+
+<div class="HamburgerMenu">
+  <div class="social-links">
+    <a href="https://github.com/dev-AshishRanjan/Idea-Arca" class="link">
+      <i class="fa-brands fa-github fa-bounce"></i>
+    </a>
+    <a href="/" class="link">
+      <i class="fa-solid fa-globe fa-bounce"></i>
+    </a>
+  </div>
+  <div class="nav-links">
+    <a href="/contributors" class="link">Contributors</a>
+    <a href="/contact" class="link">Contact</a>
+    <select name="themes" id="themes2" class="btn">
+      <option value="dark" selected>Dark</option>
+      <option value="light">Light</option>
+      <option value="neon">Neon</option>
+    </select>
+  </div>
+  {
+    Sections.map((ele) => {
+      return (
+        <a href={`/view/${ele}`} class="link">
+          {ele}
+        </a>
+      );
+    })
+  }
+</div>
+
+<style lang="scss">
+  .HamburgerMenu {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -25rem;
+    width: 22rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.5rem;
+    z-index: 5;
+    backdrop-filter: blur(2rem);
+    overflow: auto;
+    transition: all 0.15s ease-in-out;
+    // gap: 1rem;
+    a {
+      text-decoration: none;
+      color: var(--primary-3);
+      font-size: 1.1rem !important;
+      text-transform: uppercase;
+      padding: 0.7rem 0;
+    }
+    .social-links {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      a {
+        text-decoration: none;
+        color: var(--primary-3);
+        padding: 0.3rem;
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed var(--primary-3);
+      a {
+        text-decoration: none;
+        color: var(--primary-3);
+      }
+      select {
+        width: 8ch;
+        text-overflow: ellipsis;
+
+        option {
+          font-weight: 100;
+          &:hover {
+            background: var(--primary-2);
+          }
+        }
+      }
+    }
+  }
+
+  .hide {
+    right: -25rem !important;
+  }
+  .show {
+    right: 0 !important;
+  }
+
+  @media (min-width: 800px) {
+    .HamburgerMenu {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const html = document.documentElement;
+  const PIBtheme = localStorage.getItem("PIBtheme");
+  if (PIBtheme === null) {
+    localStorage.setItem("PIBtheme", "dark");
+  }
+  console.log({ PIBtheme });
+  const selectEle: any = document.querySelector("#themes2");
+  selectEle.value = PIBtheme;
+  html.classList.add(PIBtheme);
+
+  const select = document.querySelector("#themes2");
+  select.addEventListener("change", handleChange);
+
+  const allClasses = (classes: any) => {
+    const newClasses = [];
+    for (const class_name of classes) {
+      if (!class_name.includes("astro")) {
+        newClasses.push(class_name);
+      }
+    }
+    return newClasses;
+  };
+
+  function handleChange() {
+    const selectele: any = document.querySelector("#themes2");
+    const selectVal = selectele.value;
+    console.log(selectVal);
+    // const html = document.querySelector("html");
+    const list: any = html.classList;
+    var classes: any = html.classList;
+    classes = allClasses(classes);
+    classes.map((ele) => {
+      html.classList.remove(ele);
+    });
+    html.classList.add(selectVal);
+    console.log({ classes });
+    localStorage.setItem("PIBtheme", selectVal);
+  }
+
+  // handleChange();
+</script>
