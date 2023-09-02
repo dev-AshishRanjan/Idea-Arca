@@ -4,13 +4,16 @@
 <div class="nav">
   <!-- <a href="/">Home</a> -->
   <div class="social-links">
-    <a href="https://github.com/">
-      <iconify-icon icon="devicon:github"></iconify-icon>
+    <a href="https://github.com/" class="link">
+      <i class="fa-brands fa-github fa-bounce"></i>
+    </a>
+    <a href="/" class="link">
+      <i class="fa-solid fa-globe fa-bounce"></i>
     </a>
   </div>
   <div class="nav-links">
-    <a href="/contributors">Contributors</a>
-    <a href="/contact">Contact</a>
+    <a href="/contributors" class="link">Contributors</a>
+    <a href="/contact" class="link">Contact</a>
     <select name="themes" id="themes" class="btn">
       <option value="dark" selected>Dark</option>
       <option value="light">Light</option>
@@ -31,11 +34,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 3rem;
+      gap: 2rem;
       a {
         text-decoration: none;
         color: var(--primary-3);
         padding: 0.3rem;
+        i {
+          font-size: 1.5rem;
+        }
       }
     }
     .nav-links {
@@ -50,16 +56,17 @@
       select {
         width: 8ch;
         text-overflow: ellipsis;
+
         option {
           font-weight: 100;
+          &:hover {
+            background: var(--primary-2);
+          }
         }
       }
     }
   }
 </style>
-
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
-></script>
 
 <script>
   const html = document.documentElement;
@@ -68,13 +75,14 @@
     localStorage.setItem("PIBtheme", "dark");
   }
   console.log({ PIBtheme });
-  document.querySelector("#themes").value = PIBtheme;
+  const selectEle: any = document.querySelector("#themes");
+  selectEle.value = PIBtheme;
   html.classList.add(PIBtheme);
 
   const select = document.querySelector("#themes");
   select.addEventListener("change", handleChange);
 
-  const allClasses = (classes) => {
+  const allClasses = (classes: any) => {
     const newClasses = [];
     for (const class_name of classes) {
       if (!class_name.includes("astro")) {
@@ -85,7 +93,8 @@
   };
 
   function handleChange() {
-    const selectVal = document.querySelector("#themes").value;
+    const selectele: any = document.querySelector("#themes");
+    const selectVal = selectele.value;
     console.log(selectVal);
     // const html = document.querySelector("html");
     const list: any = html.classList;

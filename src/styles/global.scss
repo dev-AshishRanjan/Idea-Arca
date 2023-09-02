@@ -63,6 +63,12 @@ main {
   width: 30rem;
   text-overflow: ellipsis;
 }
+.link{
+  transition: all 0.1s ease-in-out;
+  &:hover{
+    opacity: 0.7;
+  }
+}
 
 ::-webkit-scrollbar {
   display: none;

@@ -6,7 +6,11 @@ import Sections from "../database/sections.json";
 <div class="side-nav">
   {
     Sections.map((ele) => {
-      return <a href={`/view/${ele}`}>{ele}</a>;
+      return (
+        <a href={`/view/${ele}`} class="link">
+          {ele}
+        </a>
+      );
     })
   }
 </div>
