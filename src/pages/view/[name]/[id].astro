@@ -10,22 +10,16 @@ export async function getStaticPaths() {
   MainData.map((Ele) => {
     Ele.data.map((ele) => {
       allParams.push({
-        name: Ele.section,
-        id: ele.id,
+        path: `/view/${Ele.section}/${ele.id}`,
+        params: {
+          name: Ele.section,
+          id: ele.id,
+        },
       });
     });
   });
 
-  return [
-    allParams.map((Ele) => {
-      return {
-        params: {
-          name: Ele.name,
-          id: Ele.id,
-        },
-      };
-    }),
-  ];
+  return allParams;
 }
 
 // data fetching
