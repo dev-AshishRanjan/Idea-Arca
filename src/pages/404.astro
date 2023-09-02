@@ -1,0 +1,38 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+const path = Astro.request.url;
+---
+
+<MainLayout title="Idea Arca">
+  <main>
+    <h1>404</h1>
+    <p>Page Not Found</p>
+    <span>{path}</span>
+  </main>
+</MainLayout>
+
+<style lang="scss">
+  main{
+    flex-direction: column;
+    h1{
+      font-size: 2rem;
+    }
+    span{
+      padding: 0.5rem 1rem;
+      border: 1px dashed var(--primary-3);
+      border-radius: 0.5rem;
+      backdrop-filter: blur(0.5rem);
+      max-width: 70%;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+  }
+  @media (max-width:800px){
+    main{
+      span{
+        max-width: 100%;
+      }
+    }
+  }
+</style>
