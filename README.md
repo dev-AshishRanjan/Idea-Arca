@@ -23,7 +23,7 @@
 </div>
 
 <p align="center">
-  <img align="center" src="https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines= 👋🏻 Welcome to Idea Arca 👋🏻;👨🏻‍💻 Let's Build Together 👩🏻‍💻;💡 Get Your New project Idea 💡;🌐 Check our Website 🌐;🙏🏻 Thanks for Contributing 🙏🏻"/>
+  <img align="center" src="https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines= 👋🏻 Welcome to Idea Arca 👋🏻;👨🏻‍💻 Let's Build Together 👩🏻‍💻;💡 Get Your New project Idea 💡;🌐 Check our Website 🌐;🙏🏻 Thanks for Contributing 🙏🏻"
  <img src= 'https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2.5' align="center/>
 </p>
 
