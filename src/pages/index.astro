@@ -122,19 +122,38 @@ const repoURL = "https://github.com/dev-AshishRanjan/Idea-Arca";
   @media (max-width: 1000px) {
     .details {
       flex-direction: column;
+      gap: 4.5rem;
       .hero {
+        width: 90%;
         .title {
           font-size: 2rem;
         }
       }
       .github-details {
-        width: 100%;
+        width: 90%;
         .client {
           font-size: 1.5rem;
         }
         div {
           width: unset;
         }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .details {
+      gap: 2.5rem;
+      .hero {
+        width: 100%;
+      }
+      .github-details {
+        width: 100%;
+        background: transparent;
+        backdrop-filter: blur(0.15rem);
+        border: 1px dashed var(--primary-3);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
       }
     }
   }

@@ -1,8 +1,40 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
+import { Image } from "astro:assets";
 ---
 
-
 <MainLayout title="Idea Arca">
-
+  <main></main>
 </MainLayout>
+
+<script>
+  const main = document.querySelector("main");
+  function generateCard(ele: any) {
+    const card = document.createElement("a");
+    card.classList.add("contributor-card");
+    card.setAttribute("href", ele.html_url);
+    card.setAttribute("target", "_blank");
+    card.innerHTML = `
+    <Image src=${ele.avatar_url}/>
+    <h2>${ele.login}</h2>
+    <p>Contributions : ${ele.contributions}</p>
+    `;
+    main.appendChild(card);
+  }
+  try {
+    fetch("https://api.github.com/repos/rupali-codes/LinksHub/contributors")
+      .then((req) => req.json())
+      .then((res) => {
+        res.map((ele: any) => {
+          generateCard(ele);
+        });
+      })
+      .catch((e) => {
+        alert("Network Error");
+        main.innerText = "Network Error";
+      });
+  } catch (e) {
+    alert(e);
+    main.innerText = "Network Error";
+  }
+</script>
