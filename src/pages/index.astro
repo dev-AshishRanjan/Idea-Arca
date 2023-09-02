@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
+const repoURL = "https://github.com/dev-AshishRanjan/Idea-Arca";
 ---
 
 <MainLayout title="Idea Arca">
@@ -141,7 +141,7 @@ const repoURL = "https://github.com/dev-AshishRanjan/AetherNex";
 </style>
 
 <script>
-  const repoName = "dev-AshishRanjan/AetherNex";
+  const repoName = "dev-AshishRanjan/Idea-Arca";
   const getRepoInfo = async (repoName) => {
     const response = await fetch(`https://api.github.com/repos/${repoName}`);
     const data = await response.json();
