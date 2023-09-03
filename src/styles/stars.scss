@@ -1,0 +1,108 @@
+$shooting-time: 3000ms;
+
+.night {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: rotateZ(0deg);
+  z-index: -1;
+}
+.shooting_star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  // width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, var(--primary-3), var(--primary-2));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation:
+    tail $shooting-time ease-in-out infinite,
+    shooting $shooting-time ease-in-out infinite;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    // width: 30px;
+    height: 2px;
+    background: linear-gradient(-45deg, var(--primary-2), var(--primary-3), var(--primary-2));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining $shooting-time ease-in-out infinite;
+  }
+
+  &::after {
+    // CodePen Error
+    // @extend .shooting_star::before;
+    
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    // width: 30px;
+    height: 2px;
+    background: linear-gradient(-45deg, var(--primary-2), var(--primary-3), var(--primary-2));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining $shooting-time ease-in-out infinite;
+    transform: translateX(50%) rotateZ(-45deg);
+  }
+  
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      $delay: random(9999) + 0ms;
+      top: calc(#{random(100) - 0%});
+      left: calc(#{random(100) - 20%});
+      animation-delay: $delay;
+      opacity: random(50) / 100 + 0.5;
+      
+      &::before,
+      &::after {
+        animation-delay: $delay;
+      }
+    }
+  }
+}
+
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  
+  30% {
+    width: 100px;
+  }
+  
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shining {
+  0% {
+    width: 0;
+  }
+  
+  50% {
+    width: 30px;
+  }
+  
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+  
+  100% {
+    transform: translateX(400px);
+  }
+}
