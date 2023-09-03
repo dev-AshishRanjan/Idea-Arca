@@ -6,7 +6,8 @@ import "../styles/mixins.scss";
 import Header from "../components/Header.astro";
 import SideNav from "../components/SideNav.astro";
 import HamburgerMenu from "../components/HamburgerMenu.astro";
-import ShootingStars from "../components/ShootingStars.astro";
+import ShootingStars from "../components/animations/ShootingStars.astro";
+import Firefly from "../components/animations/Firefly.astro";
 ---
 
 <html lang="en">
@@ -31,7 +32,9 @@ import ShootingStars from "../components/ShootingStars.astro";
       <div class="grains"></div>
       <!--grain style -->
       <div class="top-body">
+        <!-- Animations -->
         <ShootingStars />
+        <Firefly />
         <!--Main Content -->
         <Header />
         <div class="main">
@@ -131,6 +134,7 @@ import ShootingStars from "../components/ShootingStars.astro";
 </style>
 
 <script>
+  // Hamburger
   const HamburgerMenu = document.querySelector(".HamburgerMenu");
   const Ham = document.querySelector(".ham");
   const Cross = document.querySelector(".cross");
@@ -154,4 +158,18 @@ import ShootingStars from "../components/ShootingStars.astro";
   }
 
   HamBar.addEventListener("click", handleHamClick);
+
+  // session storage - Background Animations
+  const animationNo = 2; // update it after every new animation
+  const Animations = ["ShootingStars", "Firefly"];
+  let animation = sessionStorage.getItem("animationIndex");
+  if (animation === null) {
+    let val = Math.round(Math.random() * (animationNo - 1));
+    sessionStorage.setItem("animationIndex", JSON.stringify(val));
+    const ele = document.querySelector(`.${Animations[val]}`);
+    ele.style.display = "block";
+  } else {
+    const ele = document.querySelector(`.${Animations[JSON.parse(animation)]}`);
+    ele.style.display = "block";
+  }
 </script>

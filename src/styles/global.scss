@@ -146,3 +146,17 @@ i {
   --sidenav: #03001Cce;
   --gradient: #1c2f4b;
 }
+
+
+// canvas for Background Animations
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: rotateZ(0deg);
+  z-index: -1;
+  display: none;
+}

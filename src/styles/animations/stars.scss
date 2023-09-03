@@ -1,15 +1,5 @@
 $shooting-time: 3000ms;
 
-.night {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  transform: rotateZ(0deg);
-  z-index: -1;
-}
 .shooting_star {
   position: absolute;
   left: 50%;
