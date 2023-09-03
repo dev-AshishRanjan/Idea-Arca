@@ -69,6 +69,16 @@ $shooting-time: 3000ms;
   }
 }
 
+@media (max-width:800px){
+  .shooting_star {
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        left: calc(#{random(100) - 50%});
+      }
+    }
+  }
+}
+
 @keyframes tail {
   0% {
     width: 0;
