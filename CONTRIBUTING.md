@@ -8,7 +8,6 @@ Here are some ways you can contribute to this project:
 - Write documentation.
 - Others : Implement New Features , Modify UI/UX
 
-
 ### Process of Contribution
 
 1. _Fork_ : Fork this GitHub Repo to your own github account
@@ -17,11 +16,10 @@ Here are some ways you can contribute to this project:
 4. _Push_ : After all changes are commited, push your changes to your remote repo.
 5. _PR_ : After pushing changes, raise a PR from your remote repo to this repo's dev branch.
 
-
 > If you are new to git and github, I will suggest you first go through this :
+>
 > 1. YT video (Recommended) : https://www.youtube.com/watch?v=RGOj5yH7evk&pp=ygUOZ2l0IGFuZCBnaXRodWI%3D
 > 2. Docs : https://hacktoberfest.com/participation/#beginner-resources
-
 
 ---
 
@@ -57,7 +55,12 @@ we are showing an eg by adding a theme called `test`.
 </select>
 ```
 
-2. Adding a new `class` code in `./src/styles/global.scss` :
+2. Adding a new `class` code in `./src/styles/themes.scss` :
+   Name of the class is the value given to `value` attribute of your `<option>` tag
+   <br>
+   Here we used : <br>
+   `<option value="test">Test</option>`
+   so our class is `test`.
 
 - Before
 
@@ -80,6 +83,7 @@ we are showing an eg by adding a theme called `test`.
 .neon {
   /*same*/
 }
+
 /* Added code 👇 */
 .test {
   --primary-1: #000000;
@@ -100,8 +104,6 @@ we are showing an eg by adding a theme called `test`.
 5. `--gradient` : this is a `random color` which suits the website, it's the color of the gradient circle at top of the website
 
 _**You can use https://colorhunt.co/ for the 4 Primary Colors, and choose a nice color for gradient on your own**_
-
-
 
 ## ADD Ideas
 
@@ -220,4 +222,4 @@ we are showing an example by adding an idea in a new sectio : `BackboneJs` secti
 
 1. `section` : the major Fields
 2. **`link` : It should be a working, non-broken link. It can be a figma, hosted website link. If your idea is based on any other already existing website (can be desings or any feature), then provide that website link.**
-3. *All the `id` in each sections must be **unique***
+3. \*All the `id` in each sections must be **unique\***

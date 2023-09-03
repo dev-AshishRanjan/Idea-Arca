@@ -1,0 +1,35 @@
+// Themes 👇
+// Code Below this point for themes
+// Follow the style pattern
+// Resource : https://colorhunt.co/ 
+
+// by dev-AshishRanjan
+.dark {
+  --primary-1: #03001C;
+  --primary-2: #301E67;
+  --primary-3: #5B8FB9;
+  --primary-3: #9c83ea;
+  --primary-4: #B6EADA;
+  --sidenav: #03001Cce;
+  --gradient: #182840;
+}
+
+// by dev-AshishRanjan
+.light {
+  --primary-1: #FAF8F1;
+  --primary-2: #FAEAB1;
+  --primary-3: #E5BA73;
+  --primary-4: #C58940;
+  --sidenav: #FAF8F1ce;
+  --gradient: #f7b2ff;
+}
+
+// by dev-AshishRanjan
+.neon {
+  --primary-1: #793FDF;
+  --primary-2: #7091F5;
+  --primary-3: #97FFF4;
+  --primary-4: #ffffff;
+  --sidenav: #793FDFce;
+  --gradient: #e600ff;
+}
