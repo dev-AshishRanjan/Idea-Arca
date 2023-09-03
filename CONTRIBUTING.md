@@ -59,10 +59,14 @@ we are showing an eg by adding a theme called `test`.
 ```
 
 2. Adding a new `class` code in `./src/styles/themes.scss` :
-   Name of the class is the value given to `value` attribute of your `<option>` tag
-   <br>
-   Here we used : <br>
-   `<option value="test">Test</option>`
+
+  Name of the class is the value given to `value` attribute of your `<option>` tag
+
+  Here we used :
+
+  ```js
+  <option value="test">Test</option>
+  ```
    so our class is `test`.
 
 - Before
