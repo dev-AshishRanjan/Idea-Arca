@@ -13,25 +13,32 @@ import Firefly from "../components/animations/Firefly.astro";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/icons/icon_512.png" /> -->
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link
+    <meta
+      name="keywords"
+      content="projects, idea , bank,PIB, Idea Arca,ideas, archive "
+    />
+    <meta name="theme-color" content="#5f5eaa" />
+    <link rel="icon" href="/icons/icon_512.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/icons/icon_512.png" />
+    <link rel="apple-touch-icon" href="/icons/icon_512.png" /><link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <meta
+    /><meta
       name="description"
       content="Idea Arca (Latin: 'Idea Vault') is a Project Idea Bank. Unleash your
     tech creativity. Discover, collaborate, and bring to life innovative
     project ideas in various tech fields through this inspirational
     repository."
-    />
-    <title>{title}</title>
-  </head>
+    /><title>{title}</title></head
+  >
+
   <body>
     <!--grid style -->
     <div class="body">
@@ -61,123 +68,129 @@ import Firefly from "../components/animations/Firefly.astro";
       </div>
     </div>
   </body>
-</html>
 
-<style lang="scss">
-  body {
-    height: 100vh;
-    width: 100vw;
-    // background: var(--primary-1);
-    color: var(--primary-3);
-    overflow: hidden;
-    background-image: linear-gradient(var(--primary-3) 1.5px, transparent 1.5px),
-      linear-gradient(to right, var(--primary-3) 1.5px, transparent 1.5px);
-    background-size: 40px 40px;
-    background-color: var(--primary-1);
-
-    .body {
-      position: relative;
+  <style lang="scss">
+    body {
       height: 100vh;
       width: 100vw;
       // background: var(--primary-1);
       color: var(--primary-3);
       overflow: hidden;
-      background: radial-gradient(
-        circle at top,
-        var(--gradient),
-        var(--sidenav)
-      );
-      .top-body {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        z-index: 2;
-        .main {
-          .hamBar {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 1rem;
-            display: none;
-            .cross {
-              display: none;
-            }
-          }
-        }
-      }
-      .grains {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background-image: radial-gradient(var(--primary-2) 1px, transparent 1px),
-          radial-gradient(var(--primary-2) 1px, transparent 1px);
-        background-size: 32px 32px;
-        background-position: 0 0, 16px 16px;
-        background-color: rgba(0, 0, 0, 0);
-        z-index: 1;
-        opacity: 0.7;
-      }
-    }
-  }
+      background-image: linear-gradient(
+          var(--primary-3) 1.5px,
+          transparent 1.5px
+        ),
+        linear-gradient(to right, var(--primary-3) 1.5px, transparent 1.5px);
+      background-size: 40px 40px;
+      background-color: var(--primary-1);
 
-  @media (max-width: 800px) {
-    body {
       .body {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        // background: var(--primary-1);
+        color: var(--primary-3);
+        overflow: hidden;
+        background: radial-gradient(
+          circle at top,
+          var(--gradient),
+          var(--sidenav)
+        );
         .top-body {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100vw;
+          z-index: 2;
           .main {
             .hamBar {
-              display: block;
-              z-index: 100;
+              position: absolute;
+              top: 0;
+              right: 0;
+              padding: 1rem;
+              display: none;
+              .cross {
+                display: none;
+              }
+            }
+          }
+        }
+        .grains {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100vw;
+          background-image: radial-gradient(
+              var(--primary-2) 1px,
+              transparent 1px
+            ),
+            radial-gradient(var(--primary-2) 1px, transparent 1px);
+          background-size: 32px 32px;
+          background-position: 0 0, 16px 16px;
+          background-color: rgba(0, 0, 0, 0);
+          z-index: 1;
+          opacity: 0.7;
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      body {
+        .body {
+          .top-body {
+            .main {
+              .hamBar {
+                display: block;
+                z-index: 100;
+              }
             }
           }
         }
       }
     }
-  }
-</style>
+  </style>
 
-<script>
-  // Hamburger
-  const HamburgerMenu = document.querySelector(".HamburgerMenu");
-  const Ham = document.querySelector(".ham");
-  const Cross = document.querySelector(".cross");
-  const HamBar = document.querySelector(".hamBar");
+  <script>
+    // Hamburger
+    const HamburgerMenu = document.querySelector(".HamburgerMenu");
+    const Ham = document.querySelector(".ham");
+    const Cross = document.querySelector(".cross");
+    const HamBar = document.querySelector(".hamBar");
 
-  var count = 0;
-  function handleHamClick() {
-    if (count % 2 == 0) {
-      HamburgerMenu.classList.remove("hide");
-      HamburgerMenu.classList.add("show");
-      Ham.style.display = "none";
-      Cross.style.display = "block";
-    } else {
-      HamburgerMenu.classList.remove("show");
-      HamburgerMenu.classList.add("hide");
-      Cross.style.display = "none";
-      Ham.style.display = "block";
+    var count = 0;
+    function handleHamClick() {
+      if (count % 2 == 0) {
+        HamburgerMenu.classList.remove("hide");
+        HamburgerMenu.classList.add("show");
+        Ham.style.display = "none";
+        Cross.style.display = "block";
+      } else {
+        HamburgerMenu.classList.remove("show");
+        HamburgerMenu.classList.add("hide");
+        Cross.style.display = "none";
+        Ham.style.display = "block";
+      }
+      console.log(count);
+      count++;
     }
-    console.log(count);
-    count++;
-  }
 
-  HamBar.addEventListener("click", handleHamClick);
+    HamBar.addEventListener("click", handleHamClick);
 
-  // session storage - Background Animations
-  // uncomment for dynamic animations
-  // const animationNo = 2; // update it after every new animation
-  // const Animations = ["ShootingStars", "Firefly"];
-  // let animation = sessionStorage.getItem("animationIndex");
-  // if (animation === null) {
-  //   let val = Math.round(Math.random() * (animationNo - 1));
-  //   sessionStorage.setItem("animationIndex", JSON.stringify(val));
-  //   const ele = document.querySelector(`.${Animations[val]}`);
-  //   ele.style.display = "block";
-  // } else {
-  //   const ele = document.querySelector(`.${Animations[JSON.parse(animation)]}`);
-  //   ele.style.display = "block";
-  // }
-</script>
+    // session storage - Background Animations
+    // uncomment for dynamic animations
+    // const animationNo = 2; // update it after every new animation
+    // const Animations = ["ShootingStars", "Firefly"];
+    // let animation = sessionStorage.getItem("animationIndex");
+    // if (animation === null) {
+    //   let val = Math.round(Math.random() * (animationNo - 1));
+    //   sessionStorage.setItem("animationIndex", JSON.stringify(val));
+    //   const ele = document.querySelector(`.${Animations[val]}`);
+    //   ele.style.display = "block";
+    // } else {
+    //   const ele = document.querySelector(`.${Animations[JSON.parse(animation)]}`);
+    //   ele.style.display = "block";
+    // }
+  </script>
+</html>

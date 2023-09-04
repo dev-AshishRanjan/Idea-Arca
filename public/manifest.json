@@ -1,0 +1,28 @@
+{
+  "theme_color": "rgba(0,0,255,0)",
+  "background_color": "rgba(0,0,0,0)",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Idea Arca",
+  "short_name": "Idea Arca",
+  "description": "Idea Arca (Latin: 'Idea Vault') is a Project Idea Bank. Unleash yourtech creativity. Discover, collaborate, and bring to life innovativeproject ideas in various tech fields through this inspirationalrepository.",
+  "icons": [
+    {
+      "src": "/icons/icon_256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon_512.png",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "maskable"
+    }
+  ]
+}
