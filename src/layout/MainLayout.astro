@@ -6,7 +6,7 @@ import "../styles/mixins.scss";
 import Header from "../components/Header.astro";
 import SideNav from "../components/SideNav.astro";
 import HamburgerMenu from "../components/HamburgerMenu.astro";
-import ShootingStars from "../components/animations/ShootingStars.astro";
+// import ShootingStars from "../components/animations/ShootingStars.astro";
 import Firefly from "../components/animations/Firefly.astro";
 ---
 
@@ -33,7 +33,7 @@ import Firefly from "../components/animations/Firefly.astro";
       <!--grain style -->
       <div class="top-body">
         <!-- Animations -->
-        <ShootingStars />
+        <!-- <ShootingStars /> -->
         <Firefly />
         <!--Main Content -->
         <Header />
@@ -160,16 +160,17 @@ import Firefly from "../components/animations/Firefly.astro";
   HamBar.addEventListener("click", handleHamClick);
 
   // session storage - Background Animations
-  const animationNo = 2; // update it after every new animation
-  const Animations = ["ShootingStars", "Firefly"];
-  let animation = sessionStorage.getItem("animationIndex");
-  if (animation === null) {
-    let val = Math.round(Math.random() * (animationNo - 1));
-    sessionStorage.setItem("animationIndex", JSON.stringify(val));
-    const ele = document.querySelector(`.${Animations[val]}`);
-    ele.style.display = "block";
-  } else {
-    const ele = document.querySelector(`.${Animations[JSON.parse(animation)]}`);
-    ele.style.display = "block";
-  }
+  // uncomment for dynamic animations
+  // const animationNo = 2; // update it after every new animation
+  // const Animations = ["ShootingStars", "Firefly"];
+  // let animation = sessionStorage.getItem("animationIndex");
+  // if (animation === null) {
+  //   let val = Math.round(Math.random() * (animationNo - 1));
+  //   sessionStorage.setItem("animationIndex", JSON.stringify(val));
+  //   const ele = document.querySelector(`.${Animations[val]}`);
+  //   ele.style.display = "block";
+  // } else {
+  //   const ele = document.querySelector(`.${Animations[JSON.parse(animation)]}`);
+  //   ele.style.display = "block";
+  // }
 </script>
