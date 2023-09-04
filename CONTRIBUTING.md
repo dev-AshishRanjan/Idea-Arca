@@ -13,12 +13,12 @@ Here are some ways you can contribute to this project:
 1. _Fork_ : Fork this GitHub Repo to your own github account
 2. _Clone_ : Clone the forked repo (the repo present on your account) to your local machine.
 3. _Issue_ : Create an Issue regarding the feature that you will be working on and get the issue assigned to you
-3. _Changes_ : Create a new branch and commit your changes on that branch.
-4. _Push_ : After all changes are commited, push your changes to your remote repo.
-5. _PR_ : After pushing changes, raise a PR from your remote repo to this repo's dev branch. In the PR mention the issue number that you will be closing.
-
+4. _Changes_ : Create a new branch and commit your changes on that branch.
+5. _Push_ : After all changes are commited, push your changes to your remote repo.
+6. _PR_ : After pushing changes, raise a PR from your remote repo to this repo's dev branch. In the PR mention the issue number that you will be closing.
 
 > If you are new to git and github, I will suggest you first go through this :
+>
 > 1. YT video (Recommended) : https://www.youtube.com/watch?v=RGOj5yH7evk&pp=ygUOZ2l0IGFuZCBnaXRodWI%3D
 > 2. Docs : https://hacktoberfest.com/participation/#beginner-resources
 
@@ -36,12 +36,12 @@ Here we are talking about the theme for the website.
 The process to add theme is (After Fork And Clone):</br>
 we are showing an eg by adding a theme called `test`.
 
-1. Add a new `<option>` in `./src/components/Header.astro` :
+1. Add a new `<option>` in `./src/components/ThemeSelector.astro` :
 
 - Before
 
 ```js
-<select name="themes" id="themes" class="btn">
+<select name="themes" id={id} class="btn">
   /* other options */
   <option value="neon">Neon</option>
 </select>
@@ -50,7 +50,7 @@ we are showing an eg by adding a theme called `test`.
 - After
 
 ```js
-<select name="themes" id="themes" class="btn">
+<select name="themes" id={id} class="btn">
   /* other options */
   <option value="neon">Neon</option>
   /* Added code 👇 */
@@ -60,14 +60,15 @@ we are showing an eg by adding a theme called `test`.
 
 2. Adding a new `class` code in `./src/styles/themes.scss` :
 
-  Name of the class is the value given to `value` attribute of your `<option>` tag
+Name of the class is the value given to `value` attribute of your `<option>` tag
 
-  Here we used :
+Here we used :
 
-  ```js
-  <option value="test">Test</option>
-  ```
-   so our class is `test`.
+```js
+<option value="test">Test</option>
+```
+
+so our class is `test`.
 
 - Before
 

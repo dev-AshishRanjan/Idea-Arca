@@ -88,12 +88,12 @@ Here we are talking about the theme for the website.
 The process to add theme is (After Fork And Clone):</br>
 we are showing an eg by adding a theme called `test`.
 
-1. Add a new `<option>` in `./src/components/Header.astro` :
+1. Add a new `<option>` in `./src/components/ThemeSelector.astro` :
 
   - Before
 
   ```js
-  <select name="themes" id="themes" class="btn">
+  <select name="themes" id={id} class="btn">
     /* other options */
     <option value="neon">Neon</option>
   </select>
@@ -102,7 +102,7 @@ we are showing an eg by adding a theme called `test`.
   - After
 
   ```js
-  <select name="themes" id="themes" class="btn">
+  <select name="themes" id={id} class="btn">
     /* other options */
     <option value="neon">Neon</option>
     /* Added code 👇 */
