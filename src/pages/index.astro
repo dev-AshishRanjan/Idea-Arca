@@ -17,9 +17,11 @@ const repoURL = "https://github.com/dev-AshishRanjan/Idea-Arca";
         <img
           src=""
           class="typing"
+          loading="lazy"
           alt=""
           <img
           alt=""
+          loading="lazy"
           src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=1.5"
         />
       </p>
@@ -91,6 +93,11 @@ const repoURL = "https://github.com/dev-AshishRanjan/Idea-Arca";
         width: 70%;
         // font-weight: 100;
         // word-break: break-all;
+        .typing {
+          height: fit-content;
+          width: fit-content;
+          display: none;
+        }
       }
     }
     .github-details {
@@ -200,6 +207,7 @@ const repoURL = "https://github.com/dev-AshishRanjan/Idea-Arca";
     const typing = document.querySelector(".typing");
     const url = `https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines=Welcome+to+Idea Arca+!;Let's+Build+Together;Get Your New project Idea;Check+our+GitHub+Repo;Thanks+for+Contributing`;
     typing.setAttribute("src", url);
+    typing.style.display = "block";
   }
 
   document.querySelector(":root").addEventListener("change", handleThemeChange);

@@ -15,7 +15,7 @@ import { Image } from "astro:assets";
     card.setAttribute("href", ele.html_url);
     card.setAttribute("target", "_blank");
     card.innerHTML = `
-    <Image src=${ele.avatar_url}/>
+    <Image src=${ele.avatar_url} loading="lazy"/>
     <h2>${ele.login}</h2>
     <p>Contributions : ${ele.contributions}</p>
     `;
