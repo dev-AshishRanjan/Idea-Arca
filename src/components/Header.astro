@@ -1,4 +1,5 @@
 ---
+import ThemeSelector from "./ThemeSelector.astro";
 ---
 
 <div class="nav">
@@ -18,12 +19,7 @@
   <div class="nav-links">
     <a href="/contributors" class="link">Contributors</a>
     <a href="/contact" class="link">Contact</a>
-    <select name="themes" id="themes" class="btn">
-      <option value="dark" selected>Dark</option>
-      <option value="light">Light</option>
-      <option value="neon">Neon</option>
-      <option value="cool">Cool</option>
-    </select>
+    <ThemeSelector id="themes" />
   </div>
 </div>
 

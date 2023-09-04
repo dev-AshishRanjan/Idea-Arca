@@ -1,5 +1,6 @@
 ---
 import Sections from "../database/sections.json";
+import ThemeSelector from "./ThemeSelector.astro";
 // const val=document.
 ---
 
@@ -15,12 +16,7 @@ import Sections from "../database/sections.json";
   <div class="nav-links">
     <a href="/contributors" class="link">Contributors</a>
     <a href="/contact" class="link">Contact</a>
-    <select name="themes" id="themes2" class="btn">
-      <option value="dark" selected>Dark</option>
-      <option value="light">Light</option>
-      <option value="neon">Neon</option>
-      <option value="cool">Cool</option>
-    </select>
+    <ThemeSelector id="themes2"/>
   </div>
   {
     Sections.map((ele) => {

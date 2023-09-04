@@ -1,0 +1,10 @@
+---
+const { id } = Astro.props;
+---
+
+<select name="themes" id={id} class="btn">
+  <option value="dark" selected>Dark</option>
+  <option value="light">Light</option>
+  <option value="neon">Neon</option>
+  <option value="cool">Cool</option>
+</select>
