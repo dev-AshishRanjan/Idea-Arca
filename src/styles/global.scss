@@ -9,6 +9,7 @@
   font-size: 1rem;
   line-height: 1.5;
   text-overflow: ellipsis;
+  scrollbar-width: none;  // for hiding scrollbar
   /* color: var(--primary-3); */
 }
 
@@ -31,8 +32,8 @@
 main {
   width: 100vw;
   height: 100vh;
-  padding-left: 20rem;
-  padding-right: 3rem;
+  padding-left: 19rem;
+  padding-right: 2rem;
   padding-bottom: 7rem;
   padding-top: 5rem;
   overflow: auto;
@@ -136,6 +137,12 @@ i {
 ::-webkit-scrollbar {
   display: none;
 }
+
+::selection{
+  background: var(--primary-2);
+  // text-shadow: 1px 1px 2px var(--sidenav);
+}
+
 
 :root {
   --primary-1: #03001C;
