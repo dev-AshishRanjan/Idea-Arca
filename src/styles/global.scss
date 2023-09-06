@@ -9,7 +9,9 @@
   font-size: 1rem;
   line-height: 1.5;
   text-overflow: ellipsis;
+  scrollbar-width: none;  // for hiding scrollbar
   /* color: var(--primary-3); */
+  scroll-behavior: smooth;
 }
 
 
@@ -31,8 +33,8 @@
 main {
   width: 100vw;
   height: 100vh;
-  padding-left: 20rem;
-  padding-right: 3rem;
+  padding-left: 19rem;
+  padding-right: 2rem;
   padding-bottom: 7rem;
   padding-top: 5rem;
   overflow: auto;
@@ -137,6 +139,12 @@ i {
   display: none;
 }
 
+::selection{
+  background: var(--primary-2);
+  // text-shadow: 1px 1px 2px var(--sidenav);
+}
+
+
 :root {
   --primary-1: #03001C;
   --primary-2: #301E67;
@@ -159,4 +167,19 @@ i {
   transform: rotateZ(0deg);
   z-index: -1;
   // display: none;
+}
+
+// scroll to top
+.scroll-to-top {
+  position: fixed;
+  bottom:1rem;
+  right:2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.show {
+  opacity: 1;
 }

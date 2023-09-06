@@ -6,8 +6,9 @@ import Cards from "../../../components/Cards.astro";
 
 export async function getStaticPaths() {
   return [
-    Sections.map((ele) => {
+    Sections.flatMap((ele) => {
       return {
+        path: `/view/${ele}`,
         params: {
           name: ele,
         },
