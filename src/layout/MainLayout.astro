@@ -58,6 +58,9 @@ import Firefly from "../components/animations/Firefly.astro";
             <i class="fa-solid fa-bars ham"></i>
             <i class="fa-solid fa-xmark cross"></i>
           </div>
+          <div class="scroll-to-top btn" id="scrollToTopButton">
+            <i class="fa-solid fa-angles-up fa-bounce"></i>
+          </div>
           <slot>
             <main>
               This is the default slot, which will be used if no other slots are
@@ -192,5 +195,42 @@ import Firefly from "../components/animations/Firefly.astro";
     //   const ele = document.querySelector(`.${Animations[JSON.parse(animation)]}`);
     //   ele.style.display = "block";
     // }
+  </script>
+  <script>
+    const scrollToTopButton = document.getElementById("scrollToTopButton");
+    const main = document.querySelector("main");
+    const details = document.querySelector(".details");
+
+    // Add a click event listener to scroll to the top when the button is clicked
+    scrollToTopButton.addEventListener("click", () => {
+      main !== null &&
+        main.scrollTo({
+          top: 0,
+          behavior: "smooth", // This enables smooth scrolling
+        });
+      details !== null &&
+        details.scrollTo({
+          top: 0,
+          behavior: "smooth", // This enables smooth scrolling
+        });
+    });
+    if (main !== null) {
+      main.addEventListener("scroll", () => {
+        if (main.scrollTop > 50) {
+          scrollToTopButton.classList.add("show");
+        } else {
+          scrollToTopButton.classList.remove("show");
+        }
+      });
+    }
+    if (details !== null) {
+      details.addEventListener("scroll", () => {
+        if (details.scrollTop > 50) {
+          scrollToTopButton.classList.add("show");
+        } else {
+          scrollToTopButton.classList.remove("show");
+        }
+      });
+    }
   </script>
 </html>

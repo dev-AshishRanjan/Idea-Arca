@@ -11,6 +11,7 @@
   text-overflow: ellipsis;
   scrollbar-width: none;  // for hiding scrollbar
   /* color: var(--primary-3); */
+  scroll-behavior: smooth;
 }
 
 
@@ -166,4 +167,19 @@ i {
   transform: rotateZ(0deg);
   z-index: -1;
   // display: none;
+}
+
+// scroll to top
+.scroll-to-top {
+  position: fixed;
+  bottom:1rem;
+  right:2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.show {
+  opacity: 1;
 }
