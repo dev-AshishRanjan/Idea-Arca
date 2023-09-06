@@ -12,12 +12,12 @@ const path = Astro.request.url;
 </MainLayout>
 
 <style lang="scss">
-  main{
+  main {
     flex-direction: column;
-    h1{
+    h1 {
       font-size: 2rem;
     }
-    span{
+    span {
       padding: 0.5rem 1rem;
       border: 1px dashed var(--primary-3);
       border-radius: 0.5rem;
@@ -28,11 +28,15 @@ const path = Astro.request.url;
       word-wrap: break-word;
     }
   }
-  @media (max-width:800px){
-    main{
-      span{
+  @media (max-width: 800px) {
+    main {
+      span {
         max-width: 100%;
       }
     }
   }
 </style>
+
+<script>
+  document.querySelector("main>span").textContent = window.location.href;
+</script>
