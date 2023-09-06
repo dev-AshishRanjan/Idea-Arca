@@ -5,15 +5,16 @@ import Sections from "../../../database/sections.json";
 import Cards from "../../../components/Cards.astro";
 
 export async function getStaticPaths() {
-  return [
-    Sections.map((ele) => {
-      return {
-        params: {
-          name: ele,
-        },
-      };
-    }),
-  ];
+  const paths = [];
+  for (const ele of Sections) {
+    paths.push({
+      path: `/view/${ele}`,
+      params: {
+        name: ele,
+      },
+    });
+  }
+  return [paths];
 }
 import MainData from "../../../database/MainData.json";
 var Data = [];
