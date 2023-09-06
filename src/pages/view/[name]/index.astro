@@ -5,16 +5,16 @@ import Sections from "../../../database/sections.json";
 import Cards from "../../../components/Cards.astro";
 
 export async function getStaticPaths() {
-  const paths = [];
-  for (const ele of Sections) {
-    paths.push({
-      path: `/view/${ele}`,
-      params: {
-        name: ele,
-      },
-    });
-  }
-  return [paths];
+  return [
+    Sections.flatMap((ele) => {
+      return {
+        path: `/view/${ele}`,
+        params: {
+          name: ele,
+        },
+      };
+    }),
+  ];
 }
 import MainData from "../../../database/MainData.json";
 var Data = [];
