@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "prepare": "husky install",
     "format": "prettier --write **/*.{js,jsx,json,md,css,scss,astro}"
   },
   "dependencies": {
@@ -27,7 +28,7 @@
   "lint-staged": {
     "**/*.{js,jsx,json,md,css,scss,astro}": [
       "npm run format",
-      "git add ."
+      "git add"
     ]
   }
 }
