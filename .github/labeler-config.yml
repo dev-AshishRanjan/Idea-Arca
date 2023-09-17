@@ -1,0 +1,29 @@
+filters:
+  - label: 'enhancement'
+    regexs:
+      - /\bfeat\b/
+      - /feature/i
+    events: [pull_request]
+    targets: [title]
+
+  - label: 'documentation'
+    regexs:
+      - /docs/i
+    events: [pull_request]
+    targets: [title]
+  - label: 'low-code'
+    regexs:
+      - /docs/i
+    events: [pull_request]
+    targets: [title]
+
+  - label: 'bug'
+    regexs:
+      - /bug/i
+    events: [pull_request]
+    targets: [title]
+  - label: 'bug'
+    regexs:
+      - /fix/i
+    events: [pull_request]
+    targets: [title]
