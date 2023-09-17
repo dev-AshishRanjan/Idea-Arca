@@ -55,6 +55,13 @@
         "tags": ["Vue.js", "Firebase", "Recipes", "CSS"],
         "description": "Build a community-driven recipe sharing platform using Vue.js, Firebase, and CSS. This project is a food lover's dream, offering a place to discover, share, and collaborate on delicious recipes.The Vue.js front end provides an attractive and user-friendly interface for browsing and searching recipes. Users can create accounts, submit their own recipes, and explore a vast collection of culinary creations. The platform encourages engagement and collaboration among food enthusiasts.Firebase powers the real-time data synchronization, ensuring that users always have access to the latest recipes and updates. Recipes are categorized by cuisine, dietary preferences, and difficulty levels for easy navigation.Users can save their favorite recipes, rate dishes, and leave comments to share their cooking experiences. The project also includes a meal planning feature, allowing users to create weekly menus and generate shopping lists.CSS is used to create visually appealing recipe cards and layouts that showcase mouthwatering images and step-by-step instructions. Whether you're a seasoned chef or a home cook, this project provides a delightful space to explore and share culinary creations.Visit the demo link to start discovering new recipes, sharing your own culinary masterpieces, and connecting with fellow food enthusiasts.",
         "link": "/example-recipe-sharing"
+      },
+      {
+        "id": 4,
+        "title": "New Idea Title",
+        "tags": ["Vue.js", "New Idea Tag"],
+        "description": "This is the description for the new idea.",
+        "link": "/example-new-idea"
       }
     ]
   },
