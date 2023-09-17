@@ -12,7 +12,7 @@ $shooting-time: 3000ms;
   animation:
     tail $shooting-time ease-in-out infinite,
     shooting $shooting-time ease-in-out infinite;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -20,7 +20,12 @@ $shooting-time: 3000ms;
     right: 0;
     // width: 30px;
     height: 2px;
-    background: linear-gradient(-45deg, var(--primary-2), var(--primary-3), var(--primary-2));
+    background: linear-gradient(
+      -45deg,
+      var(--primary-2),
+      var(--primary-3),
+      var(--primary-2)
+    );
     transform: translateX(50%) rotateZ(45deg);
     border-radius: 100%;
     animation: shining $shooting-time ease-in-out infinite;
@@ -29,20 +34,25 @@ $shooting-time: 3000ms;
   &::after {
     // CodePen Error
     // @extend .shooting_star::before;
-    
+
     content: '';
     position: absolute;
     top: calc(50% - 1px);
     right: 0;
     // width: 30px;
     height: 2px;
-    background: linear-gradient(-45deg, var(--primary-2), var(--primary-3), var(--primary-2));
+    background: linear-gradient(
+      -45deg,
+      var(--primary-2),
+      var(--primary-3),
+      var(--primary-2)
+    );
     transform: translateX(50%) rotateZ(45deg);
     border-radius: 100%;
     animation: shining $shooting-time ease-in-out infinite;
     transform: translateX(50%) rotateZ(-45deg);
   }
-  
+
   @for $i from 1 through 20 {
     &:nth-child(#{$i}) {
       $delay: random(9999) + 0ms;
@@ -50,7 +60,7 @@ $shooting-time: 3000ms;
       left: calc(#{random(100) - 20%});
       animation-delay: $delay;
       opacity: random(50) / 100 + 0.5;
-      
+
       &::before,
       &::after {
         animation-delay: $delay;
@@ -59,7 +69,7 @@ $shooting-time: 3000ms;
   }
 }
 
-@media (max-width:800px){
+@media (max-width: 800px) {
   .shooting_star {
     @for $i from 1 through 20 {
       &:nth-child(#{$i}) {
@@ -73,11 +83,11 @@ $shooting-time: 3000ms;
   0% {
     width: 0;
   }
-  
+
   30% {
     width: 100px;
   }
-  
+
   100% {
     width: 0;
   }
@@ -87,11 +97,11 @@ $shooting-time: 3000ms;
   0% {
     width: 0;
   }
-  
+
   50% {
     width: 30px;
   }
-  
+
   100% {
     width: 0;
   }
@@ -101,7 +111,7 @@ $shooting-time: 3000ms;
   0% {
     transform: translateX(0);
   }
-  
+
   100% {
     transform: translateX(400px);
   }

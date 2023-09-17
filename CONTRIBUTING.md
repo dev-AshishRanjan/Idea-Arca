@@ -129,14 +129,14 @@ we are showing an example by adding an idea in `React` section.
 ```js
 [
   {
-    section: "React",
+    section: 'React',
     data: [
       {
         id: 1,
-        title: "E-commerce Dashboard",
-        tags: ["React", "Redux", "CSS", "API Integration"],
-        description: "Lorem Ispum",
-        link: "https://example-ecommerce-dashboard.com",
+        title: 'E-commerce Dashboard',
+        tags: ['React', 'Redux', 'CSS', 'API Integration'],
+        description: 'Lorem Ispum',
+        link: 'https://example-ecommerce-dashboard.com',
       },
     ],
   },
@@ -148,7 +148,7 @@ we are showing an example by adding an idea in `React` section.
 ```js
 [
   {
-    section: "React",
+    section: 'React',
     data: [
       {
         // prev code
@@ -156,10 +156,10 @@ we are showing an example by adding an idea in `React` section.
       /* Added code 👇 */
       {
         id: 2,
-        title: "Test",
-        tags: ["React", "Redux", "scss", "API"],
-        description: "Give Meaningful Description, there is no word limit",
-        link: "Working Link",
+        title: 'Test',
+        tags: ['React', 'Redux', 'scss', 'API'],
+        description: 'Give Meaningful Description, there is no word limit',
+        link: 'Working Link',
       },
     ],
   },
@@ -175,13 +175,13 @@ we are showing an example by adding an idea in a new sectio : `BackboneJs` secti
 - Before
 
 ```js
-["React", "Vue", "Svelte", "Frontend", "Backend"];
+['React', 'Vue', 'Svelte', 'Frontend', 'Backend'];
 ```
 
 - After
 
 ```js
-["React", "Vue", "Svelte", "Frontend", "Backend", "BackboneJs"];
+['React', 'Vue', 'Svelte', 'Frontend', 'Backend', 'BackboneJs'];
 ```
 
 2. Add Your Object in the `./src/database/MainData.json` inside the `data` of React section :
@@ -191,14 +191,14 @@ we are showing an example by adding an idea in a new sectio : `BackboneJs` secti
 ```js
 [
   {
-    section: "React",
+    section: 'React',
     data: [
       {
         id: 1,
-        title: "E-commerce Dashboard",
-        tags: ["React", "Redux", "CSS", "API Integration"],
-        description: "Lorem Ispum",
-        link: "Working Link",
+        title: 'E-commerce Dashboard',
+        tags: ['React', 'Redux', 'CSS', 'API Integration'],
+        description: 'Lorem Ispum',
+        link: 'Working Link',
       },
     ],
   },
@@ -212,14 +212,14 @@ we are showing an example by adding an idea in a new sectio : `BackboneJs` secti
 [
   // prev Codes
   {
-    section: "BackboneJs",
+    section: 'BackboneJs',
     data: [
       {
         id: 1,
-        title: "E-commerce Dashboard",
-        tags: ["Backbonejs"],
-        description: "Give Meaningful Description, there is no word limit",
-        link: "Working Link",
+        title: 'E-commerce Dashboard',
+        tags: ['Backbonejs'],
+        description: 'Give Meaningful Description, there is no word limit',
+        link: 'Working Link',
       },
     ],
   },

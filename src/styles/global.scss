@@ -4,17 +4,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', monospace,sans-serif;
+  font-family: 'Montserrat', monospace, sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5;
   text-overflow: ellipsis;
-  scrollbar-width: none;  // for hiding scrollbar
+  scrollbar-width: none; // for hiding scrollbar
   /* color: var(--primary-3); */
   scroll-behavior: smooth;
 }
-
-
 
 .btn {
   padding: 0.3rem 0.5rem;
@@ -25,7 +23,7 @@
   color: var(--primary-4);
   border-radius: 0.3rem;
   transition: all 0.1s ease-in-out;
-  &:hover{
+  &:hover {
     opacity: 0.8;
   }
 }
@@ -66,21 +64,21 @@ main {
   text-overflow: ellipsis;
 }
 
-@media (max-width:800px){
-  main{
+@media (max-width: 800px) {
+  main {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .details{
+  .details {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  #websiteUrl{
+  #websiteUrl {
     margin-left: 2rem;
   }
 }
 
-.contributor-card{
+.contributor-card {
   width: 15rem;
   height: 22rem;
   position: relative;
@@ -94,39 +92,38 @@ main {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  transition:all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   overflow: hidden;
   text-decoration: none;
   color: var(--primary-3);
-  &:hover{
+  &:hover {
     border: 1px solid var(--primary-3);
     box-shadow: 0 1px 1px 1px var(--primary-2);
   }
-  img{
+  img {
     position: absolute;
     top: 0;
     left: 0;
     width: 15rem;
     height: 15rem;
     object-fit: cover;
-    transition:all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
     opacity: 0.7;
     border-radius: 0%;
-    &:hover{
+    &:hover {
       border-radius: 50%;
       object-position: 0 0;
-      opacity: .9;
+      opacity: 0.9;
     }
   }
-  p{
+  p {
     font-weight: 100;
   }
 }
 
-
-.link{
+.link {
   transition: all 0.1s ease-in-out;
-  &:hover{
+  &:hover {
     opacity: 0.7;
   }
 }
@@ -139,22 +136,20 @@ i {
   display: none;
 }
 
-::selection{
+::selection {
   background: var(--primary-2);
   // text-shadow: 1px 1px 2px var(--sidenav);
 }
 
-
 :root {
-  --primary-1: #03001C;
-  --primary-2: #301E67;
-  --primary-3: #5B8FB9;
+  --primary-1: #03001c;
+  --primary-2: #301e67;
+  --primary-3: #5b8fb9;
   // --primary-3: #9c83ea;
-  --primary-4: #B6EADA;
-  --sidenav: #03001Cce;
+  --primary-4: #b6eada;
+  --sidenav: #03001cce;
   --gradient: #1c2f4b;
 }
-
 
 // canvas for Background Animations
 .canvas {
@@ -172,8 +167,8 @@ i {
 // scroll to top
 .scroll-to-top {
   position: fixed;
-  bottom:1rem;
-  right:2rem;
+  bottom: 1rem;
+  right: 2rem;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;

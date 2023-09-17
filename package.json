@@ -1,16 +1,33 @@
 {
-	"name": "-project-idea-bank",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"astro": "^2.10.14",
-		"sass": "^1.66.1"
-	}
+  "name": "-project-idea-bank",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write **/*.{js,jsx,json,md,css,scss,astro}"
+  },
+  "dependencies": {
+    "astro": "^2.10.14",
+    "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,json,md,css,scss,astro}": [
+      "npm run format",
+      "git add ."
+    ]
+  }
 }

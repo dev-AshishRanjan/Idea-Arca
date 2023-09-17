@@ -114,7 +114,7 @@
         "link": "/example-auth-service"
       }
     ]
-  } ,
+  },
   {
     "section": "Full Stack",
     "data": [
@@ -264,5 +264,5 @@
         "link": "/example-image-slider"
       }
     ]
-  }     
+  }
 ]
