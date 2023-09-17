@@ -30,6 +30,10 @@ labels:
     action: merge
   hacktoberfest-accepted: 
     action: merge
+  'Open-Sorcerer':
+    action : comment
+    delay: 5s
+    message: "You are an Open Sorcerer 🥳🪄"
   'new contributor':yaml
     action: comment
     delay: 5s
@@ -39,9 +43,9 @@ merges:
   # Delete branch after merging the PR
   - action: delete_branch
   # Create a new tag after merging the PR
-  - action: tag
-    name: "Open-Sorcerer"
-    message: "You are an Open Sorcerer 🥳🪄"
+  - action: label
+    labels: 
+      - 'Open-Sorcerer'
 
 # All maintainer comments containing the pattern "duplicate of"
 # will apply the duplicate label
@@ -56,7 +60,7 @@ comments:
   - action: label
     pattern: /LGTM/i
     labels: 
-      - merge when passing
+      - 'merge when passing'
   - action: label
     pattern: /invalid/i
     labels: 
@@ -75,34 +79,34 @@ commits:
     # specify which user this action applies to
     user: "maintainer"
     labels: 
-      - merge when passing
+      - 'merge when passing'
   - action: label
     pattern: BREAKING CHANGE
     labels: 
-      - Major Version
+      - 'Major Version'
 	- action: label
 	  pattern: /perf.+?:/
 	  labels: 
-       - Major Version
+       - 'Major Version'
 	- action: label
 	  pattern: /feat.+?:/
 	  labels: 
-	    - Minor Version
+	    - 'Minor Version'
 	- action: label
 	  pattern: /fix.+?:/
 	  labels: 
-	    - Patch Version
+	    - 'Patch Version'
 
 # Add the following block to automatically apply the "merge when passing" label to every PR.
 pull_requests:
   - action: label
     labels:
-      - Idea-Arca
+      - 'Idea-Arca'
   - action: label
     user: "maintainer"
     pattern: /.*/
     labels: 
-      - merge when passing
+      - 'merge when passing'
 
 
 # [BETA]
