@@ -38,17 +38,30 @@ repository.
 
 ## Tech Stack
 
-1. **_Astro_** : A fast front-end js framework
+<p>
+    <img src="https://img.shields.io/badge/Astro-7c3aed?style=for-the-badge&logo=astro&logoColor=white" alt="Next.js Official Website"/>
+    <img src="https://img.shields.io/badge/sass-7c3aed?style=for-the-badge&logo=sass&logoColor=white" alt="TailWind CSS Official Website"/>
+    <img src="https://img.shields.io/badge/html5-7c3aed?style=for-the-badge&logo=html5&logoColor=white" alt="TypeScript official Website"/>
+    <img src="https://img.shields.io/badge/javascript-7c3aed?style=for-the-badge&logo=javascript&logoColor=white" alt="TypeScript official Website"/>
+    <img src="https://img.shields.io/badge/json-7c3aed?style=for-the-badge&logo=json&logoColor=white" alt="TypeScript official Website"/>
+    <img src="https://img.shields.io/badge/markdown-7c3aed?style=for-the-badge&logo=markdown&logoColor=white" alt="TypeScript official Website"/>
+</p>
+
+| **Astro**                                                                                  | **scss**                                                                                     | **JSON**                                                                             |
+| ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [_Youtube Vid_](https://www.youtube.com/watch?v=zrPVTf761OI&pp=ygUOYXN0cm8gdHV0b3JpYWw%3D) | [_Youtube Vid_](https://www.youtube.com/watch?v=_a5j7KoflTs&pp=ygUNc2FzcyB0dXRvcmlhbA%3D%3D) | [_Youtube Vid_](https://www.youtube.com/watch?v=iiADhChRriM&pp=ygUManNvbnR1dG9yaWFs) |
+
+<!-- 1.**_Astro_** : A fast front-end js framework
 
 - Video : https://www.youtube.com/watch?v=zrPVTf761OI&pp=ygUOYXN0cm8gdHV0b3JpYWw%3D
 
-2. **_scss_** :
+2.**_scss_** :
 
 - Video : https://www.youtube.com/watch?v=_a5j7KoflTs&pp=ygUNc2FzcyB0dXRvcmlhbA%3D%3D
 
-3. **JSON** :
+3.**JSON** :
 
-- Video : https://www.youtube.com/watch?v=iiADhChRriM&pp=ygUManNvbnR1dG9yaWFs
+- Video : https://www.youtube.com/watch?v=iiADhChRriM&pp=ygUManNvbnR1dG9yaWFs -->
 
 After going through these videos you're qualified enough to work on our codebase
 
