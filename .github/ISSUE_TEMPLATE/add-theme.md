@@ -2,7 +2,7 @@
 name: ADD Theme 🌈
 about: Add new theme
 title: '[Theme] : <Add your title under this angular bracket only>'
-labels: 'theme'
+labels: 'theme, hacktoberfest'
 assignees: ''
 ---
 

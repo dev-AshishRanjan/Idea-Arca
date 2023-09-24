@@ -2,7 +2,7 @@
 name: ADD Idea 💡
 about: Add new Project Idea
 title: '[Idea] : <Add your title under this angular bracket only>'
-labels: 'idea'
+labels: 'idea, hacktoberfest'
 assignees: ''
 ---
 

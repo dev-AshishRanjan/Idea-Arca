@@ -2,7 +2,7 @@
 name: Add/Modify Docs 🗒️
 about: Add/Modify Docs
 title: '[Docs] : <Add your title under this angular bracket only>'
-labels: 'documentation'
+labels: 'documentation, hacktoberfest'
 assignees: ''
 ---
 

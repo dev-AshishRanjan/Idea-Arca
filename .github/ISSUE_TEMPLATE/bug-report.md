@@ -2,7 +2,7 @@
 name: Bug report 🐛
 about: Create a report to help us improve
 title: '[Bug] : <Add your title under this angular bracket only>'
-labels: 'bug'
+labels: 'bug, hacktoberfest'
 assignees: ''
 ---
 

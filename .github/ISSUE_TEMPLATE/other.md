@@ -2,7 +2,7 @@
 name: Others 👨🏻‍💻
 about: Others
 title: '[Others] : <Add your title under this angular bracket only>'
-labels: 'enhancement'
+labels: 'enhancement, hacktoberfest'
 assignees: ''
 ---
 
