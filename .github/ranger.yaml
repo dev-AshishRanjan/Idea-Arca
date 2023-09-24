@@ -17,56 +17,58 @@ labels:
     action: close
     delay: 15s
     comment: "Duplicate issue created! Closing in $DELAY . . ."
-  invalid: close # use defaults for comment and delay time
-  stale: 
+  invalid:
+    action: close # use defaults for comment and delay time
+  stale:
     action: close
     delay: 7 days
     comment: false # don't comment anything
   snooze:
     action: open
     delay: 7 days
-  'merge when passing': merge
-  approved: 
+  'merge when passing':
     action: merge
-  hacktoberfest-accepted: 
+  approved:
+    action: merge
+  hacktoberfest-accepted:
     action: merge
   'Open-Sorcerer':
-    action : comment
-    delay: 5s
-    message: "You are an Open Sorcerer 🥳🪄"
-  'new contributor':yaml
     action: comment
     delay: 5s
-	  message: "Thanks for making your first contribution! :slightly_smiling_face:"  
+    message: "You are an Open Sorcerer 🥳🪄"
+  'new contributor':
+    action: comment
+    delay: 5s
+    message: "Thanks for making your first contribution! :slightly_smiling_face:"
 
 merges:
   # Delete branch after merging the PR
   - action: delete_branch
   # Create a new tag after merging the PR
   - action: label
-    labels: 
+    labels:
       - 'Open-Sorcerer'
 
 # All maintainer comments containing the pattern "duplicate of"
 # will apply the duplicate label
 comments:
-    # As of now `label` is the only valid action that can be triggered by 
-    # comments, and is a required field
+  # As of now `label` is the only valid action that can be triggered by 
+  # comments, and is a required field
   - action: label
-    # either a string or a string representation of a regular expresssion
+    # either a string or a string representation of a regular expression
     pattern: /duplicate of/i
-    labels: 
-      - duplicate
+    labels:
+      - 'duplicate'
   - action: label
     pattern: /LGTM/i
-    labels: 
+    labels:
       - 'merge when passing'
   - action: label
     pattern: /invalid/i
-    labels: 
-      - invalid
-    # delete comments that match a specific pattern. In this case, all comments
-    # that include "+1" will be deleted. 
+    labels:
+      - 'invalid'
+  # delete comments that match a specific pattern. In this case, all comments
+  # that include "+1" will be deleted. 
   - action: delete_comment
     pattern: "+1" # can also be a regular expression
 
@@ -75,46 +77,39 @@ comments:
 commits:
   - action: label
     pattern: /merge when passing/i
-    pattern: /.*/
-    # specify which user this action applies to
-    user: "maintainer"
-    labels: 
-      - 'merge when passing'
   - action: label
     pattern: BREAKING CHANGE
-    labels: 
+    labels:
       - 'Major Version'
-	- action: label
-	  pattern: /perf.+?:/
-	  labels: 
-       - 'Major Version'
-	- action: label
-	  pattern: /feat.+?:/
-	  labels: 
-	    - 'Minor Version'
-	- action: label
-	  pattern: /fix.+?:/
-	  labels: 
-	    - 'Patch Version'
+  - action: label
+    pattern: /perf.+?:/
+    labels:
+      - 'Major Version'
+  - action: label
+    pattern: /feat.+?:/
+    labels:
+      - 'Minor Version'
+  - action: label
+    pattern: /fix.+?:/
+    labels:
+      - 'Patch Version'
 
 # Add the following block to automatically apply the "merge when passing" label to every PR.
 pull_requests:
   - action: label
     labels:
-      - 'Idea-Arca'
+      - ['Idea-Arca','hacktoberfest']
   - action: label
     user: "maintainer"
     pattern: /.*/
-    labels: 
+    labels:
       - 'merge when passing'
-
 
 # [BETA]
 closes:
   # Lock an issue after the issue has been closed
   - action: lock
     delay: 0s
-  
 
 # [BETA] Labels that will be applied to issues/PRs when a sponsor opens them
 sponsor_labels:
