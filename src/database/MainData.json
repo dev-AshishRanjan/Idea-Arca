@@ -278,5 +278,24 @@
         "link": "/example-image-slider"
       }
     ]
+  },
+  {
+    "section": "Machine Learning",
+    "data": [
+      {
+        "id": 1,
+        "title": "Sentiment Analysis App",
+        "tags": ["Python", "Natural Language Processing", "Machine Learning", "Flask"],
+        "description": "Develop a sentiment analysis web application using Python, Natural Language Processing (NLP), and Flask. This project focuses on analyzing the sentiment of text input, determining whether it's positive, negative, or neutral. Utilize machine learning techniques, such as supervised learning with pre-trained models or custom model training, to achieve accurate sentiment predictions. Flask is employed to create a user-friendly web interface where users can input text and receive sentiment analysis results in real-time. Enhance the application with visualizations to present sentiment insights effectively. Whether for social media monitoring or customer feedback analysis, this sentiment analysis app provides valuable insights into textual data.",
+        "link": "/sentiment-analysis-app"
+      },
+      {
+        "id": 2,
+        "title": "Image Recognition System",
+        "tags": ["Python", "Deep Learning", "Convolutional Neural Networks", "TensorFlow"],
+        "description": "Build an image recognition system using Python, Deep Learning, Convolutional Neural Networks (CNNs), and TensorFlow. This project involves training a model to recognize objects or patterns within images. Implement CNNs to capture hierarchical features and achieve high accuracy in image classification. Provide a user interface that allows users to upload images for recognition, displaying the top predictions and confidence scores. TensorFlow facilitates efficient model training and deployment. This image recognition system is applicable in various domains, including security, healthcare, and automation. Explore the demo link to experience the accuracy and versatility of this image recognition solution.",
+        "link": "/image-recognition-system"
+      }
+    ]
   }
 ]
