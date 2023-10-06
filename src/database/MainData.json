@@ -36,6 +36,13 @@
         "tags": ["React", "MUI", "Firebase","chat-app"],
         "description": "Create a simple chat application using React.js, Material UI (MUI), and Firebase. MUI will give your app a sleek and modern appearance. This real-time chat application allows users to engage in live conversations with everyone who is using the application. Firebase plays a crucial role in enabling real-time chat functionality and database interactions, and it also offers Google authentication for easy access and login to the chat app, ensuring security. Firebase offers additional features such as hosting, storage, machine learning, and functions, which can enhance your application. By combining these technologies, you can effortlessly develop a chat app that not only boasts an appealing design but also provides secure user authentication, real-time messaging, and the ability to host it online. This project is an excellent opportunity to learn and create a practical, fully functional application!",
         "link": "https://spark-chat-app.netlify.app/"
+      },
+      {
+        "id": 6,
+        "title": "Resume Maker",
+        "tags": ["React", "MUI", "Redux"],
+        "description": "A resume maker can be developed using React, Redux, and Material UI to create a user-friendly and feature-rich application. With React's component-based architecture, reusable and dynamic form elements can be developed, while Redux can efficiently manage the application's state. Leveraging Material UI's design components ensures an aesthetically pleasing and responsive user interface. Users can benefit from customizable resume templates, the ability to import LinkedIn profiles or existing resumes, and a preview option for visualizing the final product. Incorporating save and export functionalities allows users to store their resumes online and export them in various formats. Additionally, sharing options via social media or email can enhance the user experience, making this resume maker a valuable tool for job seekers.",
+        "link": "https://resume_maker.vercel.app/"
       }
     ]
   },
