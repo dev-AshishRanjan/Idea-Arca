@@ -29,6 +29,13 @@
         "tags": ["React", "Movie Database API", "CSS"],
         "description": "Create a dynamic movie recommendation website using React, powered by a Movie Database API. This project offers movie enthusiasts a personalized platform to discover new films tailored to their preferences.Users can explore a vast library of movies, search by genre, actor, or director, and receive personalized recommendations based on their viewing history. The user-friendly interface is designed with CSS to provide an immersive and visually appealing experience.The integration with the Movie Database API ensures that the website is always up-to-date with the latest movie releases and details. Users can create profiles, rate movies, and save their favorite films for future reference.With React's fast rendering and component-based architecture, the website loads quickly and responds seamlessly to user interactions. Whether you're a casual moviegoer or a dedicated film buff, this project is your gateway to discovering exciting new movies.Visit the demo link to start exploring and receive movie recommendations that match your unique taste and preferences.",
         "link": "/example-movie-recommendation"
+      },
+      {
+        "id": 5,
+        "title": "Simple chat application",
+        "tags": ["React", "MUI", "Firebase","chat-app"],
+        "description": "Create a simple chat application using React.js, Material UI (MUI), and Firebase. MUI will give your app a sleek and modern appearance. This real-time chat application allows users to engage in live conversations with everyone who is using the application. Firebase plays a crucial role in enabling real-time chat functionality and database interactions, and it also offers Google authentication for easy access and login to the chat app, ensuring security. Firebase offers additional features such as hosting, storage, machine learning, and functions, which can enhance your application. By combining these technologies, you can effortlessly develop a chat app that not only boasts an appealing design but also provides secure user authentication, real-time messaging, and the ability to host it online. This project is an excellent opportunity to learn and create a practical, fully functional application!",
+        "link": "https://spark-chat-app.netlify.app/"
       }
     ]
   },
