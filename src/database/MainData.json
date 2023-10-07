@@ -283,7 +283,15 @@
         "tags": ["HTML", "CSS", "JavaScript", "Frontend"],
         "description": "Build a dynamic image slider with HTML, CSS transitions, and JavaScript for engaging content display.",
         "link": "/example-image-slider"
+      },     
+      {
+        "id": 10,
+        "title": "Emojicrypt",
+        "tags": ["HTML", "CSS", "JavaScript", "Frontend"],
+        "description": "A web-based project using HTML, CSS, and JavaScript that encrypts text into emoji representations and decrypts encrypted emojis back into text. Protect your messages with fun and secure emoji encryption!",
+        "link": "https://emojicrypt.vercel.app/"
       }
+      
     ]
   },
   {
