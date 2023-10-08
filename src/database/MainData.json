@@ -312,5 +312,24 @@
         "link": "/image-recognition-system"
       }
     ]
+  },
+  {
+    "section": "WordPress",
+    "data": [
+      {
+        "id": 1,
+        "title": "Custom WordPress Theme Development",
+        "tags": ["WordPress", "PHP", "Web Development", "Theme Development"],
+        "description": "Create a unique and responsive WordPress theme tailored to your specific needs. This project involves custom theme development using PHP, HTML, and CSS to ensure a visually appealing and functional website. Leverage WordPress's powerful theming engine to implement features such as custom post types, widgets, and navigation menus. The theme will be designed to enhance user experience and reflect your brand identity. Whether you're building a personal blog, portfolio, or business website, this custom WordPress theme development project delivers a seamless and professional online presence.",
+        "link": "/custom-wordpress-theme"
+      },
+      {
+        "id": 2,
+        "title": "WordPress Plugin Development",
+        "tags": ["WordPress", "PHP", "Plugin Development", "Web Development"],
+        "description": "Develop a custom WordPress plugin to extend the functionality of your WordPress site. This project focuses on creating a tailored solution to meet your specific requirements. Utilize PHP and WordPress Plugin API to build features such as custom widgets, shortcodes, or integrations with third-party services. The plugin will be designed to seamlessly integrate with your WordPress site, providing additional features and enhancing its capabilities. Whether you need e-commerce integrations, social media connectivity, or other specialized functionalities, this WordPress plugin development project ensures a scalable and efficient solution.",
+        "link": "/wordpress-plugin-development"
+      }
+    ]
   }
 ]
