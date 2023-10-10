@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "astro": "^2.10.14",
-    "sass": "^1.68.0"
+    "sass": "^1.69.0"
   },
   "devDependencies": {
     "husky": "^8.0.3",
