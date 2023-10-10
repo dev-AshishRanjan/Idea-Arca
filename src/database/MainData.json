@@ -331,5 +331,17 @@
         "link": "/wordpress-plugin-development"
       }
     ]
+  },
+  {
+    "section": "Astro",
+    "data": [
+      {
+        "id": 1,
+        "title": "Astrology App Development",
+        "tags": ["Astro", "Astrology", "UI/UX Design", "Frontend Development"],
+        "description": "Embark on a celestial journey with a custom astrology app tailored to provide personalized insights and predictions. This project involves developing a mobile application with a user-friendly interface and engaging design focused on the world of astrology. Implement features such as daily horoscopes, birth chart analysis, compatibility reports, and personalized astrological forecasts. The app will seamlessly blend aesthetic appeal with accurate astrological algorithms to offer users a unique and insightful experience. Whether you're a horoscope enthusiast or a curious beginner, this astrology app development project promises to make the cosmos more accessible.",
+        "link": "/astrology-app-development"
+      }
+    ]
   }
 ]
