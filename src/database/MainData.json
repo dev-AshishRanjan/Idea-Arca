@@ -329,6 +329,13 @@
         "tags": ["WordPress", "PHP", "Plugin Development", "Web Development"],
         "description": "Develop a custom WordPress plugin to extend the functionality of your WordPress site. This project focuses on creating a tailored solution to meet your specific requirements. Utilize PHP and WordPress Plugin API to build features such as custom widgets, shortcodes, or integrations with third-party services. The plugin will be designed to seamlessly integrate with your WordPress site, providing additional features and enhancing its capabilities. Whether you need e-commerce integrations, social media connectivity, or other specialized functionalities, this WordPress plugin development project ensures a scalable and efficient solution.",
         "link": "/wordpress-plugin-development"
+      },
+      {
+        "id": 3,
+        "title": "Mobile App Development",
+        "tags": ["Mobile App", "iOS", "Android", "App Development", "UI/UX Design"],
+        "description": "Embark on a journey to create a cutting-edge mobile app for your business or project. Our mobile app development service covers both iOS and Android platforms. We combine the expertise of our skilled developers and talented UI/UX designers to craft a user-friendly and visually appealing app. From concept to deployment, we'll work closely with you to bring your ideas to life. Whether you need a consumer-facing app, an enterprise solution, or a gaming app, we ensure that your mobile app not only meets your specifications but also excels in performance and aesthetics.",
+        "link": "/mobile-app-development"
       }
     ]
   },
