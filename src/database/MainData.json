@@ -350,5 +350,17 @@
         "link": "/astrology-app-development"
       }
     ]
+  },
+  {
+    "section": "Augmented Reality (AR)",
+    "data": [
+      {
+        "id": 1,
+        "title": "AR Navigation App",
+        "tags": ["Augmented Reality", "Mobile App", "Navigation", "Unity3D"],
+        "description": "Embark on a futuristic navigation experience with an Augmented Reality (AR) navigation app. This project involves integrating AR technology into a mobile application for seamless and interactive navigation. Users can point their devices at the surroundings, and the app overlays navigation information onto the real-world environment. Implement features such as turn-by-turn directions, points of interest markers, and real-time route adjustments. Unity3D is utilized for creating an immersive AR experience. Whether exploring a new city or navigating complex indoor spaces, this AR navigation app redefines how users interact with their surroundings.",
+        "link": "/ar-navigation-app"
+      }
+    ]
   }
 ]
