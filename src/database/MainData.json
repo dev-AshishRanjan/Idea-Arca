@@ -208,6 +208,13 @@
         "tags": ["Angular", "Node.js", "MongoDB", "Full Stack"],
         "description": "Design a music streaming platform with user playlists, recommendations, and audio streaming features.",
         "link": "/example-music-streaming"
+      },
+      {
+        "id": 11,
+        "title": "E-commerce Marketplace",
+        "tags": ["React", "Ruby on Rails", "PostgreSQL", "Payment Integration"],
+        "description": "Create a comprehensive e-commerce platform that allows users to buy and sell products, includes features such as user profiles, product listings, shopping carts, and secure payment processing.",
+        "link": "/example-ecommerce-marketplace"
       }
     ]
   },
