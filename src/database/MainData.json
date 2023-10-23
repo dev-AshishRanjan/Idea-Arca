@@ -33,7 +33,7 @@
       {
         "id": 5,
         "title": "Simple chat application",
-        "tags": ["React", "MUI", "Firebase","chat-app"],
+        "tags": ["React", "MUI", "Firebase", "chat-app"],
         "description": "Create a simple chat application using React.js, Material UI (MUI), and Firebase. MUI will give your app a sleek and modern appearance. This real-time chat application allows users to engage in live conversations with everyone who is using the application. Firebase plays a crucial role in enabling real-time chat functionality and database interactions, and it also offers Google authentication for easy access and login to the chat app, ensuring security. Firebase offers additional features such as hosting, storage, machine learning, and functions, which can enhance your application. By combining these technologies, you can effortlessly develop a chat app that not only boasts an appealing design but also provides secure user authentication, real-time messaging, and the ability to host it online. This project is an excellent opportunity to learn and create a practical, fully functional application!",
         "link": "https://spark-chat-app.netlify.app/"
       },
@@ -290,7 +290,7 @@
         "tags": ["HTML", "CSS", "JavaScript", "Frontend"],
         "description": "Build a dynamic image slider with HTML, CSS transitions, and JavaScript for engaging content display.",
         "link": "/example-image-slider"
-      },     
+      },
       {
         "id": 10,
         "title": "Emojicrypt",
@@ -298,7 +298,6 @@
         "description": "A web-based project using HTML, CSS, and JavaScript that encrypts text into emoji representations and decrypts encrypted emojis back into text. Protect your messages with fun and secure emoji encryption!",
         "link": "https://emojicrypt.vercel.app/"
       }
-      
     ]
   },
   {
@@ -307,14 +306,24 @@
       {
         "id": 1,
         "title": "Sentiment Analysis App",
-        "tags": ["Python", "Natural Language Processing", "Machine Learning", "Flask"],
+        "tags": [
+          "Python",
+          "Natural Language Processing",
+          "Machine Learning",
+          "Flask"
+        ],
         "description": "Develop a sentiment analysis web application using Python, Natural Language Processing (NLP), and Flask. This project focuses on analyzing the sentiment of text input, determining whether it's positive, negative, or neutral. Utilize machine learning techniques, such as supervised learning with pre-trained models or custom model training, to achieve accurate sentiment predictions. Flask is employed to create a user-friendly web interface where users can input text and receive sentiment analysis results in real-time. Enhance the application with visualizations to present sentiment insights effectively. Whether for social media monitoring or customer feedback analysis, this sentiment analysis app provides valuable insights into textual data.",
         "link": "/sentiment-analysis-app"
       },
       {
         "id": 2,
         "title": "Image Recognition System",
-        "tags": ["Python", "Deep Learning", "Convolutional Neural Networks", "TensorFlow"],
+        "tags": [
+          "Python",
+          "Deep Learning",
+          "Convolutional Neural Networks",
+          "TensorFlow"
+        ],
         "description": "Build an image recognition system using Python, Deep Learning, Convolutional Neural Networks (CNNs), and TensorFlow. This project involves training a model to recognize objects or patterns within images. Implement CNNs to capture hierarchical features and achieve high accuracy in image classification. Provide a user interface that allows users to upload images for recognition, displaying the top predictions and confidence scores. TensorFlow facilitates efficient model training and deployment. This image recognition system is applicable in various domains, including security, healthcare, and automation. Explore the demo link to experience the accuracy and versatility of this image recognition solution.",
         "link": "/image-recognition-system"
       }
@@ -340,7 +349,13 @@
       {
         "id": 3,
         "title": "Mobile App Development",
-        "tags": ["Mobile App", "iOS", "Android", "App Development", "UI/UX Design"],
+        "tags": [
+          "Mobile App",
+          "iOS",
+          "Android",
+          "App Development",
+          "UI/UX Design"
+        ],
         "description": "Embark on a journey to create a cutting-edge mobile app for your business or project. Our mobile app development service covers both iOS and Android platforms. We combine the expertise of our skilled developers and talented UI/UX designers to craft a user-friendly and visually appealing app. From concept to deployment, we'll work closely with you to bring your ideas to life. Whether you need a consumer-facing app, an enterprise solution, or a gaming app, we ensure that your mobile app not only meets your specifications but also excels in performance and aesthetics.",
         "link": "/mobile-app-development"
       }
