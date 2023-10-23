@@ -367,6 +367,13 @@
         "tags": ["Augmented Reality", "Mobile App", "Navigation", "Unity3D"],
         "description": "Embark on a futuristic navigation experience with an Augmented Reality (AR) navigation app. This project involves integrating AR technology into a mobile application for seamless and interactive navigation. Users can point their devices at the surroundings, and the app overlays navigation information onto the real-world environment. Implement features such as turn-by-turn directions, points of interest markers, and real-time route adjustments. Unity3D is utilized for creating an immersive AR experience. Whether exploring a new city or navigating complex indoor spaces, this AR navigation app redefines how users interact with their surroundings.",
         "link": "/ar-navigation-app"
+      },
+      {
+        "id": 2,
+        "title": "AR Virtual Art Gallery",
+        "tags": ["Augmented Reality", "Art", "Mobile App", "Unity3D"],
+        "description": "Immerse yourself in the world of art with the AR Virtual Art Gallery. This innovative mobile app combines the beauty of art with the magic of Augmented Reality. Users can explore famous artworks from renowned artists in a virtual gallery. The app allows you to place famous paintings and sculptures in your own surroundings using AR technology. Walk around the art pieces, zoom in to see intricate details, and learn about the history and significance of each masterpiece. Whether you're an art enthusiast or just looking for a unique experience, the AR Virtual Art Gallery brings art to life in a whole new way.",
+        "link": "/ar-virtual-art-gallery"
       }
     ]
   }
