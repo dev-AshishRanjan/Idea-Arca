@@ -372,6 +372,13 @@
         ],
         "description": "Embark on a journey to create a cutting-edge mobile app for your business or project. Our mobile app development service covers both iOS and Android platforms. We combine the expertise of our skilled developers and talented UI/UX designers to craft a user-friendly and visually appealing app. From concept to deployment, we'll work closely with you to bring your ideas to life. Whether you need a consumer-facing app, an enterprise solution, or a gaming app, we ensure that your mobile app not only meets your specifications but also excels in performance and aesthetics.",
         "link": "/mobile-app-development"
+      },
+      {
+        "id":4 ,
+        "title": "E-commerce Website Development",
+        "tags": ["Web Development", "E-commerce", "HTML", "CSS", "JavaScript", "Payment Integration"],
+        "description": "Develop a feature-rich e-commerce website from scratch. This project involves creating a custom online store tailored to your business needs. Use HTML, CSS, and JavaScript to build a user-friendly and visually appealing front end. Implement essential e-commerce features like product catalog, shopping cart, user accounts, and secure payment processing. Additionally, consider advanced features such as product reviews, recommendations, and order tracking. The website will help you establish a strong online presence and enable you to sell products or services efficiently.",
+        "link": "/e-commerce-website-development"
       }
     ]
   },
