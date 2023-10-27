@@ -43,6 +43,20 @@
         "tags": ["React", "MUI", "Redux"],
         "description": "A resume maker can be developed using React, Redux, and Material UI to create a user-friendly and feature-rich application. With React's component-based architecture, reusable and dynamic form elements can be developed, while Redux can efficiently manage the application's state. Leveraging Material UI's design components ensures an aesthetically pleasing and responsive user interface. Users can benefit from customizable resume templates, the ability to import LinkedIn profiles or existing resumes, and a preview option for visualizing the final product. Incorporating save and export functionalities allows users to store their resumes online and export them in various formats. Additionally, sharing options via social media or email can enhance the user experience, making this resume maker a valuable tool for job seekers.",
         "link": "https://resume_maker.vercel.app/"
+      },
+      {
+        "id": 7,
+        "title": "Restaurant Website",
+        "tags": ["React.js", "Tailwind CSS", "API"],
+        "description": "Create an interactive Restaurant Website using React.js and Tailwind CSS. Showcase the restaurant's menu, allow online reservations, and provide a seamless user experience for exploring the establishment and its offerings.",
+        "link": "https://yumeats.pages.dev/"
+      },
+      {
+        "id": 8,
+        "title": "Quiz App",
+        "tags": ["React.js", "Tailwind CSS", "Quiz"],
+        "description": "Develop a Quiz App with React.js and Tailwind CSS. Users can create, share, and play quizzes on various topics. The app will feature interactive quiz-taking experiences, result tracking, and the ability to create and explore quizzes created by others.",
+        "link": "https://marvel-quiz.pages.dev/"
       }
     ]
   },
