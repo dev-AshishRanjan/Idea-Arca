@@ -57,6 +57,13 @@
         "tags": ["React.js", "Tailwind CSS", "Quiz"],
         "description": "Develop a Quiz App with React.js and Tailwind CSS. Users can create, share, and play quizzes on various topics. The app will feature interactive quiz-taking experiences, result tracking, and the ability to create and explore quizzes created by others.",
         "link": "https://marvel-quiz.pages.dev/"
+      },
+      {
+        "id": 9,
+        "title": "MotivateMe Chrome Extension",
+        "tags": ["React.js", "Tailwind CSS", "Chrome Extension"],
+        "description":"The MotivateMe Chrome extension is designed to inspire users by reminding them of the preciousness of time. Upon installation, the user inputs their date of birth, and the extension dynamically calculates and displays their age down to the exact year, day, hour, second, and even millisecond. This real-time age counter serves as a powerful motivator, encouraging users to make the most of every moment.",
+        "link": "https://motivatemechromeextention.netlify.app/"
       }
     ]
   },
